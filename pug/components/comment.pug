@@ -10,7 +10,7 @@ mixin comment(item)
                         .desc=item.desc
                 .quote 
                     img(src="./images/quote.svg", alt="")
-            .text='" ' + item.text + ' "'
+            .text='" ' + item.text + ' "' 
             .stars 
             - for (var x = 0; x < item.stars; x++)
                 img(src="./images/comStar.svg", alt="") 
