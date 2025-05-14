@@ -36,6 +36,18 @@
   src: url("./fonts/Public_Sans/PublicSans-VariableFont_wght.ttf");
 }
 @font-face {
+  font-family: "Manrope";
+  font-style: "normal";
+  font-weight: "Regular";
+  src: url("./fonts/Manrope/Manrope-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Quicksand";
+  font-style: "normal";
+  font-weight: "Regular";
+  src: url("./fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+@font-face {
   font-family: "Poppins";
   font-style: "normal";
   font-weight: "Regular";
@@ -59,8 +71,17 @@
   font-weight: 700;
   src: url("./fonts/Poppins/Poppins-Bold.ttf");
 }
+@font-face {
+  font-family: "Poppins";
+  font-style: "normal";
+  font-weight: 800;
+  src: url("./fonts/Poppins/Poppins-ExtraBold.ttf");
+}
 * {
   font-family: "Poppins";
+}
+body {
+  background-color: #f9f9f9;
 }
 .container {
   margin: 0px auto;
@@ -82,25 +103,29 @@ header {
 }
 header .container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
   padding-top: 48px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #cbcbcb;
 }
-header .container .hdrLeft {
+header .container .mainMenu {
+  display: flex;
+  justify-content: space-between;
+}
+header .container .mainMenu .hdrLeft {
   display: flex;
   align-items: center;
   gap: 103px;
 }
-header .container .hdrLeft a {
+header .container .mainMenu .hdrLeft a {
   height: 42px;
 }
-header .container .hdrLeft ol {
+header .container .mainMenu .hdrLeft ol {
   display: flex;
   align-items: center;
   gap: 53px;
 }
-header .container .hdrLeft ol li a {
+header .container .mainMenu .hdrLeft ol li a {
   font-family: "inter";
   font-weight: 500;
   font-size: 17px;
@@ -108,11 +133,11 @@ header .container .hdrLeft ol li a {
   text-transform: capitalize;
   color: #606060;
 }
-header .container .hdrRight {
+header .container .mainMenu .hdrRight {
   display: flex;
   gap: 9px;
 }
-header .container .hdrRight .login {
+header .container .mainMenu .hdrRight .login {
   border-radius: 18px;
   padding: 17px 26px;
   width: 102px;
@@ -124,7 +149,7 @@ header .container .hdrRight .login {
   text-transform: capitalize;
   color: #606060;
 }
-header .container .hdrRight .sign {
+header .container .mainMenu .hdrRight .sign {
   border-radius: 18px;
   padding: 17px 26px;
   width: 121px;
@@ -136,6 +161,53 @@ header .container .hdrRight .sign {
   line-height: 150%;
   text-transform: capitalize;
   color: #f9f9f9;
+}
+header .container .bottomline {
+  margin: 0px;
+  margin-top: 24px;
+}
+.inputList {
+  border-radius: 13px;
+  padding: 12px 18px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  position: relative;
+}
+.inputList p {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  text-align: right;
+  color: #1a202c;
+}
+.inputList::after {
+  content: "";
+  background-image: url(../images/listArrow.svg);
+  background-size: 100% 100%;
+  width: 16px;
+  height: 9px;
+}
+.inputList .hiddenList {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 0px;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 14px 21px 0 rgba(70, 70, 70, 0.1);
+  padding: 5px;
+}
+.inputList .hiddenList p {
+  text-align: left!important;
+}
+.bottomline {
+  width: 100%;
+  border-bottom: 1px solid #cbcbcb;
+  margin-bottom: 100px;
 }
 main .container.titelBlock {
   display: grid;
@@ -345,8 +417,638 @@ main .container.premiumQual .grid .left {
   display: flex;
   justify-content: center;
 }
-main .container.premiumQual .line {
+main .container.cardsList3cols h2 {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 57%;
+  color: #323142;
+  margin-bottom: 86px;
+}
+main .container.cardsList3cols h2 span {
+  color: #6c5fbc;
+}
+main .container.cardsList3cols .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+main .container.cardsList3cols .grid .card {
+  border: 1.25px solid #f4f4f6;
+  border-radius: 30px;
+  box-shadow: 6px 71px 36px 0 rgba(229, 229, 229, 0.7);
+  background: #fff;
+  overflow: hidden;
+}
+main .container.cardsList3cols .grid .card .image {
+  width: 100%;
+  height: 176px;
+}
+main .container.cardsList3cols .grid .card .image img {
+  object-fit: cover;
+}
+main .container.cardsList3cols .grid .card .con {
+  padding-top: 11px;
+  padding-bottom: 18px;
+  padding-left: 33px;
+  padding-right: 33px;
+}
+main .container.cardsList3cols .grid .card .con .tag {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-weight: 400;
+  font-size: 12px;
+}
+main .container.cardsList3cols .grid .card .con .tag.colorYellow {
+  background: #f7edd0;
+  color: #daa31a;
+}
+main .container.cardsList3cols .grid .card .con .tag.colorRed {
+  background: #f7c5ba;
+  color: #fb471d;
+}
+main .container.cardsList3cols .grid .card .con .name {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 162%;
+  color: #323142;
+}
+main .container.cardsList3cols .grid .card .con .cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container.cardsList3cols .grid .card .con .cardFooter .left {
+  display: flex;
+  gap: 6px;
+}
+main .container.cardsList3cols .grid .card .con .cardFooter .left .time {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 133%;
+  color: #8e97a6;
+}
+main .container.cardsList3cols .grid .card .con .cardFooter .left .stars {
+  display: flex;
+  gap: 6px;
+}
+main .container.cardsList3cols .grid .card .con .cardFooter .left .stars p {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 133%;
+  color: #8e97a6;
+}
+main .container.cardsList3cols .grid .card .con .cardFooter .right {
+  border-radius: 50%;
+}
+main .container.cardsList3cols .CLfooter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 66px;
+  margin-bottom: 120px;
+}
+main .container.cardsList3cols .CLfooter a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 226%;
+  letter-spacing: -0.01em;
+  color: #acadb9;
+}
+main .container.cardsList3cols .line {
   width: 100%;
   border-bottom: 1px solid #cbcbcb;
   margin-bottom: 100px;
+}
+main .container.cardsList5cols h2 {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 57%;
+  color: #323142;
+  margin-bottom: 86px;
+}
+main .container.cardsList5cols h2 span {
+  color: #6c5fbc;
+}
+main .container.cardsList5cols .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+main .container.cardsList5cols .grid .card {
+  border: 1.25px solid #f4f4f6;
+  border-radius: 35px;
+  box-shadow: 7px 82px 41px 0 rgba(229, 229, 229, 0.7);
+  background: #fff;
+  overflow: hidden;
+  padding-top: 26px;
+  padding-bottom: 30px;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+main .container.cardsList5cols .grid .card .image {
+  width: 100%;
+  height: 208px;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+main .container.cardsList5cols .grid .card .image .foodImage {
+  width: 100%;
+  object-fit: cover;
+}
+main .container.cardsList5cols .grid .card .image .heart {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+main .container.cardsList5cols .grid .card .con .tag {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-weight: 400;
+  font-size: 12px;
+}
+main .container.cardsList5cols .grid .card .con .tag.colorYellow {
+  background: #f7edd0;
+  color: #daa31a;
+}
+main .container.cardsList5cols .grid .card .con .tag.colorRed {
+  background: #f7c5ba;
+  color: #fb471d;
+}
+main .container.cardsList5cols .grid .card .con .tag.colorGreen {
+  background: #d6eee0;
+  color: #309d5b;
+}
+main .container.cardsList5cols .grid .card .con .name {
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 163%;
+  color: #323142;
+}
+main .container.cardsList5cols .grid .card .con .ratingTime {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main .container.cardsList5cols .grid .card .con .ratingTime .time {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 133%;
+  color: #8e97a6;
+}
+main .container.cardsList5cols .grid .card .con .ratingTime .stars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+main .container.cardsList5cols .grid .card .con .ratingTime .stars p {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 133%;
+  color: #8e97a6;
+}
+main .container.cardsList5cols .grid .card .con .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 11px;
+}
+main .container.cardsList5cols .grid .card .con .price .left p {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 156%;
+  color: #323142;
+}
+main .container.cardsList5cols .grid .card .con .price .left p span {
+  font-size: 18px;
+  color: #8e97a6;
+}
+main .container.cardsList5cols .grid .card .con .price .right {
+  border-radius: 50%;
+}
+main .container.cardsList5cols .CLfooter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 66px;
+  margin-bottom: 120px;
+}
+main .container.cardsList5cols .CLfooter a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 226%;
+  letter-spacing: -0.01em;
+  color: #acadb9;
+}
+main .container.cardsList5cols .line {
+  width: 100%;
+  border-bottom: 1px solid #cbcbcb;
+  margin-bottom: 100px;
+}
+main .container .controlPurchases {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 138px;
+}
+main .container .controlPurchases .left {
+  width: 570px;
+}
+main .container .controlPurchases .left h2 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 114%;
+  text-transform: capitalize;
+  color: #18181b;
+  margin-bottom: 48px;
+}
+main .container .controlPurchases .left h2 span {
+  color: #6c5fbc;
+}
+main .container .controlPurchases .left .dateList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
+}
+main .container .controlPurchases .left .dateList .card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 7px;
+  padding-top: 4px;
+  width: 345px;
+  height: 88px;
+  border-radius: 12px;
+  background: #fff;
+}
+main .container .controlPurchases .left .dateList .card.active {
+  box-shadow: 0 14px 21px 0 rgba(70, 70, 70, 0.1);
+  background: #fff;
+}
+main .container .controlPurchases .left .dateList .card .image {
+  width: 77px;
+}
+main .container .controlPurchases .left .dateList .card .image img {
+  width: 100%;
+}
+main .container .controlPurchases .left .dateList .card .con {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+main .container .controlPurchases .left .dateList .card .con .name {
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 140%;
+  color: #323142;
+  margin-bottom: 3px;
+}
+main .container .controlPurchases .left .dateList .card .con .stts {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  color: #323142;
+}
+main .container .controlPurchases .left .dateList .card .con .stts.red {
+  color: #f1534e;
+}
+main .container .controlPurchases .left .dateList .card .con .date {
+  width: 100%;
+  text-align: end;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 140%;
+  color: #acadb9;
+}
+main .container .controlPurchases .right {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+main .container .controlPurchases .right .purchases {
+  padding: 32px 29px;
+  border: 1.57px solid #edf2f7;
+  border-radius: 25px;
+  width: 534px;
+  background: #fff;
+}
+main .container .controlPurchases .right .purchases .hdr {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+main .container .controlPurchases .right .purchases .hdr .hdrName {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 135%;
+  letter-spacing: 0.01em;
+  color: #1a202c;
+}
+main .container .controlPurchases .right .purchases .cardsList {
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 22px;
+}
+main .container .controlPurchases .right .purchases .cardsList .card {
+  border: 1.57px solid #edf2f7;
+  border-radius: 19px;
+  padding: 25px;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .con {
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft {
+  display: flex;
+  gap: 19px;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .image {
+  width: 50px;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .image img {
+  width: 100%;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .name {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #1a202c;
+  margin-bottom: 3px;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .desc {
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #a0aec0;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseright p {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  text-align: right;
+  color: #1a202c;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .prgrBar {
+  border-radius: 79px;
+  width: 100%;
+  height: 9px;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .prgrBar.main {
+  background: #e2dff2;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .prgrBar.orange {
+  background: #feefd1;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .prgrBar .line {
+  border-radius: 79px;
+  height: 9px;
+  opacity: 1;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .prgrBar .line.main {
+  background: #6c5fbc;
+}
+main .container .controlPurchases .right .purchases .cardsList .card .prgrBar .line.orange {
+  background: #fbad18;
+}
+main .container .controlPurchases .right::before {
+  content: "";
+  z-index: -5646546542;
+  position: absolute;
+  border-radius: 13px;
+  width: 466px;
+  height: 359px;
+  filter: blur(121.69897461px);
+  background: #323142;
+  opacity: 0.2;
+  bottom: -100px;
+}
+main .container.comments {
+  margin-bottom: 182px;
+}
+main .container.comments h2 {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 57%;
+  color: #323142;
+  margin-bottom: 80px;
+}
+main .container.comments h2 span {
+  color: #6c5fbc;
+}
+main .container.comments .commentsList {
+  display: flex;
+  gap: 10px;
+}
+main .container.comments .commentsList .commentShdw {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+main .container.comments .commentsList .commentShdw::before {
+  content: "";
+  border-radius: 20px;
+  width: 574px;
+  height: 350px;
+  filter: blur(184.39422607px);
+  background: #323142;
+  opacity: 0.2;
+  top: 31px;
+  position: absolute;
+  z-index: -1;
+}
+main .container.comments .commentsList .commentShdw .comment {
+  border-radius: 20px;
+  z-index: 1;
+  padding: 38px 43px;
+  background-color: #fff;
+  width: 528px;
+  height: 346px;
+}
+main .container.comments .commentsList .commentShdw .comment.hidden {
+  height: 239px;
+}
+main .container.comments .commentsList .commentShdw .comment .hdr {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+main .container.comments .commentsList .commentShdw .comment .hdr.hidden {
+  display: none;
+}
+main .container.comments .commentsList .commentShdw .comment .hdr .left {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+}
+main .container.comments .commentsList .commentShdw .comment .hdr .left .image {
+  width: 71px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main .container.comments .commentsList .commentShdw .comment .hdr .left .image img {
+  width: 100%;
+}
+main .container.comments .commentsList .commentShdw .comment .hdr .left .data .name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #030314;
+}
+main .container.comments .commentsList .commentShdw .comment .hdr .left .data .desc {
+  font-family: "Quicksand";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 156%;
+  color: #5e5d5d;
+}
+main .container.comments .commentsList .commentShdw .comment .text {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 145%;
+  text-align: justify;
+  color: #636363;
+  margin-bottom: 38px;
+}
+main .container.subForm .block {
+  padding: 61px 66px;
+  width: 100%;
+  border-radius: 30px;
+  height: 280px;
+  background-color: #5c4eae;
+  background-image: url(../images/formBg.svg);
+  background-size: auto 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main .container.subForm .block form .text {
+  padding-bottom: 37.5px;
+  font-weight: 800;
+  font-size: 70px;
+  color: rgba(249, 249, 249, 0.8);
+}
+main .container.subForm .block form .inputBlock {
+  border-radius: 10px;
+  width: 439px;
+  box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.1);
+  background-color: rgba(249, 249, 249, 0.8);
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+main .container.subForm .block form .inputBlock .btn {
+  border-radius: 8px;
+  padding: 16px 23px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #f7f8fa;
+  background: #6c5fbc;
+  cursor: pointer;
+}
+main .container.subForm .block form .inputBlock input {
+  width: 220px;
+  padding-left: 22px;
+}
+main .container.subForm .block form .inputBlock input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: #878787;
+}
+main .container.subForm .block .image img {
+  transform: translate(0px, 15px);
+}
+footer {
+  margin-top: 216px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 96px;
+  padding-bottom: 81px;
+  background: #eaeaea;
+}
+footer .container .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 44px;
+}
+footer .container .menu .left .logo {
+  width: 150px;
+}
+footer .container .menu .left .logo img {
+  width: 100%;
+}
+footer .container .menu .right ol {
+  display: flex;
+  gap: 70px;
+}
+footer .container .menu .right ol li a {
+  font-family: "inter";
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: #999;
+}
+footer .container .bottomline {
+  margin-bottom: 57px;
+}
+footer .container .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container .info .left p {
+  font-family: "inter";
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 147%;
+  color: #999;
+}
+footer .container .info .right {
+  display: flex;
+  gap: 53px;
 }

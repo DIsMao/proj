@@ -1,0 +1,20 @@
+mixin littleCard(item)
+    .card 
+        .image
+            img(src="./images/Heart.svg", alt="", class="heart")
+            img(src=item.image, alt="", class="foodImage")
+        .con 
+            div(class="tag " + item.tag_color)=item.tag 
+            .name=item.name 
+            .ratingTime 
+                .time=item.time + " •"
+                .stars
+                    img(src="./images/cardStar.svg", alt="")
+                    p=item.stars
+            .price 
+                .left 
+                    p=item.price1
+                        span="." + item.price2
+                .right
+                    img(src="./images/Add.svg", alt="")
+            

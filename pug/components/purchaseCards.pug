@@ -1,0 +1,13 @@
+mixin purchaseCard(item)
+    .card 
+        .con 
+            .purchaseleft 
+                .image 
+                    img(src=item.image, alt="")
+                div 
+                    .name=item.name
+                    .desc=item.desc
+            .purchaseright 
+                p=item.price
+        div(class="prgrBar " + item.sttsColor)
+            div(class="line " + item.sttsColor, style="width: "+ item.fill + ";")

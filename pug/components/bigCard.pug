@@ -1,0 +1,16 @@
+mixin bigCard(item)
+    .card 
+        .image
+            img(src=item.image, alt="")
+        .con 
+            div(class="tag " + item.tag_color)=item.tag 
+            .name=item.name 
+            .cardFooter
+                .left 
+                    .time=item.time + " •"
+                    .stars
+                        img(src="./images/cardStar.svg", alt="")
+                        p=item.stars
+                a(href="").right 
+                    img(src="./images/Bookmark.svg", alt="")
+            

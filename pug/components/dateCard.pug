@@ -1,0 +1,8 @@
+mixin dateCard(item)
+    div(class="card "+item.act)
+        .image 
+            img(src=item.image, alt="")
+        .con
+            .name=item.name
+            div(class="stts " + item.sttsColor)=item.stts
+            .date=item.date

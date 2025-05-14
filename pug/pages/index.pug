@@ -1,4 +1,8 @@
-
+include ../components/bigCard.pug
+include ../components/littleCard.pug
+include ../components/dateCard.pug
+include ../components/purchaseCards.pug
+include ../components/comment.pug
 doctype html
 html
     head
@@ -10,21 +14,25 @@ html
     body(class="relative")
         header
             div.container
-                div.hdrLeft
-                    a(href="") 
-                        img(src="./images/Logo.png", alt="")
-                    ol 
-                        li 
-                            a(href="") Menu
-                        li 
-                            a(href="") Blog
-                        li 
-                            a(href="") Pricing
-                        li 
-                            a(href="") Contact
-                div.hdrRight
-                    a(href="", class="login") Login
-                    a(href="", class="sign") Sign up
+                .mainMenu
+                    div.hdrLeft
+                        a(href="") 
+                            img(src="./images/Logo.png", alt="")
+                        ol 
+                            li 
+                                a(href="") Menu
+                            li 
+                                a(href="") Blog
+                            li 
+                                a(href="") Pricing
+                            li 
+                                a(href="") Contact
+                    div.hdrRight
+                        a(href="", class="login") Login
+                        a(href="", class="sign") Sign up
+           
+                .bottomline
+
         main()
             div.container.titelBlock
                 div.left
@@ -85,7 +93,131 @@ html
                             
                         img(src="./images/arrow.png", alt="", class="arrow") 
                 .line 
-                
+            //- ===========================================
+            div.container.cardsList3cols
+                h2 Our Top <span>Restaurants</span>
+                .grid 
+                    +bigCard({image:"./images/bigCards/Image1.png",name:"The Chicken King",tag:"Healthy",time:"24min",stars:"4.8",tag_color:"colorYellow"})
+                    +bigCard({image:"./images/bigCards/Image2.png",name:"The Burger King",tag:"Trending",time:"24min",stars:"4.9",tag_color:"colorRed"})
+                    +bigCard({image:"./images/bigCards/Image3.png",name:"The Chicken King",tag:"Healthy",time:"24min",stars:"4.8",tag_color:"colorYellow"})
+                .CLfooter
+                    a(href="") View All
+                        img(src="./images/viewAllArrow.svg", alt="")
+                .line
+            //- ===========================================
+            div.container.cardsList5cols
+                h2 Our Top <span>Dishes</span>
+                .grid 
+                    +littleCard({image:"./images/litteleCards/Food Image1.png",name:"Chicken Hell",tag:"Healthy",time:"24min",stars:"4.8",tag_color:"colorYellow",price1:"$12",price2:"99"})
+                    +littleCard({image:"./images/litteleCards/Food Image2.png",name:"Swe Dish",tag:"Trending",time:"34min",stars:"4.9",tag_color:"colorRed",price1:"$19",price2:"99"})
+                    +littleCard({image:"./images/litteleCards/Food Image3.png",name:"Swe Dish",tag:"Supreme",time:"34min",stars:"4.9",tag_color:"colorGreen",price1:"$19",price2:"99"})
+                    +littleCard({image:"./images/litteleCards/Food Image4.png",name:"Chicken Hell",tag:"Healthy",time:"24min",stars:"4.8",tag_color:"colorYellow",price1:"$12",price2:"99"})
+                    +littleCard({image:"./images/litteleCards/Food Image5.png",name:"Swe Dish",tag:"Trending",time:"34min",stars:"4.9",tag_color:"colorYellow",price1:"$19",price2:"99"})
+                .CLfooter
+                    a(href="") View All
+                        img(src="./images/viewAllArrow.svg", alt="")
+                .line
+            //- ===========================================
+            div.container 
+                .controlPurchases
+                    .left 
+                        h2 Control <span>Purchases</span><br> Via Dashboard
+                        .dateList
+                            +dateCard({image: "./images/dateCards/Food Image1.png", name: "Chicken Hell",stts: "On The Way",date: "3:09 PM",sttsColor: "",act: "active"})
+                            +dateCard({image: "./images/dateCards/Food Image2.png", name: "Swe Dish",stts: "Delivered",date: "Yesterday",sttsColor: "",act: ""})
+                            +dateCard({image: "./images/dateCards/Food Image3.png", name: "Fish Hell Veg",stts: "Cancelled",date: "Yesterday",sttsColor: "red",act: ""})
+
+                    .right 
+                        .purchases    
+                            .hdr 
+                                p.hdrName Purchases
+                                .inputList 
+                                    .hiddenList
+                                        p item
+                                        p item
+                                        p item
+                                    p This month
+
+                            .cardsList
+                                +purchaseCard({image: "./images/purchaseIcon1.svg", name: "Expense",desc: "Increased By 10%",price: "$409.00",sttsColor: "main",fill: "80%"})
+                                +purchaseCard({image: "./images/purchaseIcon2.svg", name: "Vocher Usage",desc: "Increased By 5%",price: "$45.78",sttsColor: "orange",fill: "60%"})
+                .bottomline
+            //- ===========================================
+            div.container.comments
+                h2 <span>Customer</span> Say
+                .commentsList 
+                    +comment({image: "./images/man.png", name: "Alexander R.",desc: "01 Year With Us ",stars: 5,showTitle: "", text: "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time"})
+                    +comment({image: "./images/man.png", name: "Alexander R.",desc: "01 Year With Us ",stars: 3,showTitle: "hidden", text: "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time"})
+            //- ===========================================
+            div.container.subForm
+                .block 
+                    form
+                        p.text GET 50%
+                        .inputBlock 
+                            input(type="text", placeholder="Enter Your Email Address")
+                            .btn subscribe
+                    .image 
+                        img(src="./images/formImg.png", alt="")
+        footer 
+            .container
+                .menu 
+                    .left 
+                        .logo 
+                            img(src="./images/Logo.png", alt="")
+                    .right
+                        ol 
+                            li 
+                                a(href="") Blog
+                            li 
+                                a(href="") Pricing
+                            li 
+                                a(href="") About Us
+                            li 
+                                a(href="") Contact
+                .bottomline
+                .info 
+                    .left 
+                        p © 2023 EATLY All Rights Reserved.
+                    .right
+                        a(href="")
+                            img(src="./images/social/f.svg", alt="") 
+                        a(href="")
+                            img(src="./images/social/in.svg", alt="") 
+                        a(href="")
+                            img(src="./images/social/inst.svg", alt="") 
+                        a(href="")
+                            img(src="./images/social/tw.svg", alt="") 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
                     
 
 

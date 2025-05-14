@@ -1,0 +1,16 @@
+mixin comment(item)  
+    .commentShdw
+        div(class="comment "+ item.showTitle) 
+            div(class="hdr "+ item.showTitle) 
+                .left
+                    .image 
+                        img(src=item.image, alt="")
+                    .data 
+                        .name=item.name
+                        .desc=item.desc
+                .quote 
+                    img(src="/images/quote.svg", alt="")
+            .text='" ' + item.text + ' "'
+            .stars 
+            - for (var x = 0; x < item.stars; x++)
+                img(src="/images/comStar.svg", alt="") 
