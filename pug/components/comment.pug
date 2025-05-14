@@ -9,8 +9,8 @@ mixin comment(item)
                         .name=item.name
                         .desc=item.desc
                 .quote 
-                    img(src="/images/quote.svg", alt="")
+                    img(src="./images/quote.svg", alt="")
             .text='" ' + item.text + ' "'
             .stars 
             - for (var x = 0; x < item.stars; x++)
-                img(src="/images/comStar.svg", alt="") 
+                img(src="./images/comStar.svg", alt="") 
