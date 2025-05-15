@@ -1,6 +1,6 @@
 mixin comment(item)  
     .commentShdw
-        div(class="comment "+ item.showTitle) 
+        div(class="commentSlideG commentSlide-"+ item.slideId +" comment "+ item.showTitle) 
             div(class="hdr "+ item.showTitle) 
                 .left
                     .image 
@@ -12,5 +12,5 @@ mixin comment(item)
                     img(src="./images/quote.svg", alt="")
             .text='" ' + item.text + ' "' 
             .stars 
-            - for (var x = 0; x < item.stars; x++)
-                img(src="./images/comStar.svg", alt="") 
+                - for (var x = 0; x < item.stars; x++)
+                    img(src="./images/comStar.svg", alt="") 

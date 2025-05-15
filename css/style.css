@@ -4,7 +4,7 @@
   font-style: "normal";
   font-weight: "Italic";
   src: url("./fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf");
-} 
+}
 @font-face {
   font-family: "inter";
   font-style: "normal";
@@ -79,6 +79,7 @@
 }
 * {
   font-family: "Poppins";
+  box-sizing: border-box;
 }
 body {
   background-color: #f9f9f9;
@@ -91,22 +92,38 @@ body {
 @media screen and (max-width: 1440px) {
   .container {
     width: 1024px;
+    padding: 0px 68px;
   }
 }
 @media screen and (max-width: 1024px) {
   .container {
     width: 100%;
+    padding: 0px 31px;
   }
 }
 header {
   margin-bottom: 49px;
+}
+@media screen and (max-width: 1440px) {
+  header {
+    margin-bottom: 34px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header {
+    margin-bottom: 57px;
+  }
 }
 header .container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   padding-top: 48px;
-  padding-bottom: 25px;
+}
+@media screen and (max-width: 1440px) {
+  header .container {
+    padding-top: 34px;
+  }
 }
 header .container .mainMenu {
   display: flex;
@@ -117,13 +134,41 @@ header .container .mainMenu .hdrLeft {
   align-items: center;
   gap: 103px;
 }
+@media screen and (max-width: 1440px) {
+  header .container .mainMenu .hdrLeft {
+    gap: 73px;
+  }
+}
 header .container .mainMenu .hdrLeft a {
   height: 42px;
+}
+header .container .mainMenu .hdrLeft a img {
+  height: 100%;
+}
+@media screen and (max-width: 1440px) {
+  header .container .mainMenu .hdrLeft a {
+    height: 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .container .mainMenu .hdrLeft a {
+    height: 42px;
+  }
 }
 header .container .mainMenu .hdrLeft ol {
   display: flex;
   align-items: center;
   gap: 53px;
+}
+@media screen and (max-width: 1440px) {
+  header .container .mainMenu .hdrLeft ol {
+    gap: 38px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .container .mainMenu .hdrLeft ol {
+    display: none;
+  }
 }
 header .container .mainMenu .hdrLeft ol li a {
   font-family: "inter";
@@ -133,9 +178,24 @@ header .container .mainMenu .hdrLeft ol li a {
   text-transform: capitalize;
   color: #606060;
 }
+@media screen and (max-width: 1440px) {
+  header .container .mainMenu .hdrLeft ol li a {
+    font-size: 12px;
+  }
+}
 header .container .mainMenu .hdrRight {
   display: flex;
   gap: 9px;
+}
+@media screen and (max-width: 1024px) {
+  header .container .mainMenu .hdrRight {
+    display: none;
+  }
+}
+@media screen and (max-width: 1440px) {
+  header .container .mainMenu .hdrRight {
+    gap: 6px;
+  }
 }
 header .container .mainMenu .hdrRight .login {
   border-radius: 18px;
@@ -148,6 +208,15 @@ header .container .mainMenu .hdrRight .login {
   line-height: 150%;
   text-transform: capitalize;
   color: #606060;
+}
+@media screen and (max-width: 1440px) {
+  header .container .mainMenu .hdrRight .login {
+    border-radius: 13px;
+    padding: 12px 19px;
+    width: 73px;
+    height: 45px;
+    font-size: 12px;
+  }
 }
 header .container .mainMenu .hdrRight .sign {
   border-radius: 18px;
@@ -162,9 +231,36 @@ header .container .mainMenu .hdrRight .sign {
   text-transform: capitalize;
   color: #f9f9f9;
 }
+@media screen and (max-width: 1440px) {
+  header .container .mainMenu .hdrRight .sign {
+    border-radius: 13px;
+    padding: 12px 19px;
+    width: 86px;
+    height: 45px;
+    font-size: 12px;
+  }
+}
+header .container .mainMenu .hdrRightMobile {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  header .container .mainMenu .hdrRightMobile {
+    display: block;
+  }
+}
 header .container .bottomline {
   margin: 0px;
   margin-top: 24px;
+}
+@media screen and (max-width: 1440px) {
+  header .container .bottomline {
+    margin-top: 17px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .container .bottomline {
+    margin-top: 30px;
+  }
 }
 .inputList {
   border-radius: 13px;
@@ -175,6 +271,18 @@ header .container .bottomline {
   gap: 13px;
   position: relative;
 }
+@media screen and (max-width: 1440px) {
+  .inputList {
+    border-radius: 9px;
+    padding: 9px 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inputList {
+    border-radius: 7px;
+    padding: 7px 11px;
+  }
+}
 .inputList p {
   font-family: "Manrope";
   font-weight: 600;
@@ -184,12 +292,34 @@ header .container .bottomline {
   text-align: right;
   color: #1a202c;
 }
+@media screen and (max-width: 1440px) {
+  .inputList p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inputList p {
+    font-size: 11px;
+  }
+}
 .inputList::after {
   content: "";
   background-image: url(../images/listArrow.svg);
   background-size: 100% 100%;
   width: 16px;
   height: 9px;
+}
+@media screen and (max-width: 1440px) {
+  .inputList::after {
+    width: 11px;
+    height: 17px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inputList::after {
+    width: 10px;
+    height: 6px;
+  }
 }
 .inputList .hiddenList {
   display: none;
@@ -209,15 +339,55 @@ header .container .bottomline {
   border-bottom: 1px solid #cbcbcb;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 1440px) {
+  .bottomline {
+    margin-bottom: 71px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .bottomline {
+    margin-bottom: 84px;
+  }
+}
 main .container.titelBlock {
   display: grid;
   grid-template-columns: 1fr auto;
   margin-bottom: 85px;
 }
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock {
+    margin-bottom: 75px;
+    grid-template-columns: 1fr;
+  }
+}
+main .container.titelBlock .left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
 main .container.titelBlock .left .desc1 {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .left .desc1 {
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .left .desc1 {
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 5px;
+  }
 }
 main .container.titelBlock .left .desc1 .line {
   border-bottom: 1px solid #201F1F;
@@ -232,6 +402,16 @@ main .container.titelBlock .left .desc1 p {
   letter-spacing: 0.13em;
   color: rgba(32, 31, 31, 0.2);
 }
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .left .desc1 p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .left .desc1 p {
+    font-size: 9px;
+  }
+}
 main .container.titelBlock .left h1 {
   font-weight: 600;
   font-size: 75px;
@@ -242,6 +422,19 @@ main .container.titelBlock .left h1 {
 }
 main .container.titelBlock .left h1 span {
   color: #5c4eae;
+}
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .left h1 {
+    font-size: 53px;
+    margin-bottom: 11px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .left h1 {
+    margin-bottom: 16px;
+    font-size: 46px;
+    text-align: center;
+  }
 }
 main .container.titelBlock .left .desc2 {
   font-family: "inter";
@@ -257,8 +450,33 @@ main .container.titelBlock .left .desc2 span {
   font-weight: 500;
   color: #6155ae;
 }
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .left .desc2 {
+    font-size: 12px;
+    margin-bottom: 37px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .left .desc2 {
+    margin-bottom: 41px;
+    font-size: 11px;
+    text-align: center;
+  }
+}
 main .container.titelBlock .left .btns {
   margin-bottom: 33px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .left .btns {
+    margin-bottom: 23px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .left .btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 26px;
+  }
 }
 main .container.titelBlock .left .btns .start {
   border-radius: 12px;
@@ -266,17 +484,78 @@ main .container.titelBlock .left .btns .start {
   padding: 18px 30px;
   color: white;
   margin-right: 18px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .left .btns .start {
+    border-radius: 9px;
+    padding: 12px 19px;
+    font-size: 11px;
+    margin-right: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .left .btns .start {
+    border-radius: 9px;
+    padding: 14px 24px;
+    margin-right: 14px;
+    font-size: 13px;
+  }
 }
 main .container.titelBlock .left .btns .go {
   border: 1.5px solid #6c5fbc;
   border-radius: 12px;
   padding: 18px 30px;
   color: #6c5fbc;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .left .btns .go {
+    border-radius: 9px;
+    padding: 12px 19px;
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .left .btns .go {
+    border-radius: 9px;
+    padding: 14px 24px;
+    font-size: 13px;
+  }
 }
 main .container.titelBlock .left .rating {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .left .rating {
+    gap: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .left .rating {
+    justify-content: center;
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .left .rating .trustpilot {
+    width: 88px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .left .rating .trustpilot {
+    width: 99px;
+  }
 }
 main .container.titelBlock .left .rating .stars {
   display: flex;
@@ -294,8 +573,29 @@ main .container.titelBlock .left .rating .stars p {
   line-height: 150%;
   color: #334155;
 }
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .left .rating .stars p {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .left .rating .stars p {
+    font-size: 12px;
+  }
+}
 main .container.titelBlock .right img {
   transform: translate(42px);
+}
+@media screen and (max-width: 1440px) {
+  main .container.titelBlock .right img {
+    width: 483px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.titelBlock .right img {
+    transform: none;
+    width: 100%;
+  }
 }
 main .container.numbersList {
   margin: auto;
@@ -308,12 +608,38 @@ main .container.numbersList {
   overflow: hidden;
   margin-bottom: 103px;
 }
+@media screen and (max-width: 1440px) {
+  main .container.numbersList {
+    padding: 34px 0px;
+    margin-bottom: 73px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.numbersList {
+    padding: 39px 51px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 67px;
+  }
+}
 main .container.numbersList .col {
   padding: 0px 66px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 11px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.numbersList .col {
+    padding: 0px 47px;
+    gap: 7px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.numbersList .col {
+    padding: 60px 0px;
+    gap: 11px;
+  }
 }
 main .container.numbersList .col .num {
   font-family: "Public_Sans";
@@ -323,6 +649,16 @@ main .container.numbersList .col .num {
   text-align: center;
   color: #fff;
 }
+@media screen and (max-width: 1440px) {
+  main .container.numbersList .col .num {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.numbersList .col .num {
+    font-size: 43px;
+  }
+}
 main .container.numbersList .col .txt {
   font-family: "inter";
   font-weight: 500;
@@ -331,9 +667,27 @@ main .container.numbersList .col .txt {
   text-align: center;
   color: #c5bfed;
 }
+@media screen and (max-width: 1440px) {
+  main .container.numbersList .col .txt {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.numbersList .col .txt {
+    font-size: 14px;
+  }
+}
 main .container.numbersList .line {
   opacity: 0.15;
   border-left: 1px solid #c5c5c5;
+}
+@media screen and (max-width: 1024px) {
+  main .container.numbersList .line {
+    height: auto;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #c5c5c5;
+  }
 }
 main .container.numbersList::after {
   content: "";
@@ -344,6 +698,13 @@ main .container.numbersList::after {
   left: 0px;
   top: 0px;
 }
+@media screen and (max-width: 1024px) {
+  main .container.numbersList::after {
+    width: 282px;
+    height: 121px;
+    background-image: url('../images/listBgLines3.svg');
+  }
+}
 main .container.numbersList::before {
   content: "";
   background-image: url('../images/listBgLines2.svg');
@@ -353,6 +714,13 @@ main .container.numbersList::before {
   right: 0px;
   top: 0px;
 }
+@media screen and (max-width: 1024px) {
+  main .container.numbersList::before {
+    background-image: url('../images/listBgLines4.svg');
+    top: auto;
+    bottom: 0px;
+  }
+}
 main .container.premiumQual .grid {
   display: grid;
   grid-template-columns: 1fr 560px;
@@ -360,9 +728,32 @@ main .container.premiumQual .grid {
   width: 100%;
   padding-bottom: 120px;
 }
+@media screen and (max-width: 1440px) {
+  main .container.premiumQual .grid {
+    grid-template-columns: 1fr 398px;
+    padding-bottom: 85px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.premiumQual .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 66px;
+  }
+}
 main .container.premiumQual .grid .right {
   display: inline-block;
   position: relative;
+}
+@media screen and (max-width: 1024px) {
+  main .container.premiumQual .grid .right {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 72px;
+  }
 }
 main .container.premiumQual .grid .right h2 {
   font-weight: 700;
@@ -375,6 +766,19 @@ main .container.premiumQual .grid .right h2 {
 main .container.premiumQual .grid .right h2 span {
   color: #6c5fbc;
 }
+@media screen and (max-width: 1440px) {
+  main .container.premiumQual .grid .right h2 {
+    font-size: 36px;
+    margin-bottom: 45px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.premiumQual .grid .right h2 {
+    font-size: 30px;
+    margin-bottom: 37px;
+    text-align: center;
+  }
+}
 main .container.premiumQual .grid .right ul {
   list-style-type: disc;
   display: flex;
@@ -384,6 +788,18 @@ main .container.premiumQual .grid .right ul {
   margin-bottom: 61px;
   padding-left: 30px;
 }
+@media screen and (max-width: 1440px) {
+  main .container.premiumQual .grid .right ul {
+    gap: 19px;
+    margin-bottom: 42px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.premiumQual .grid .right ul {
+    gap: 16px;
+    margin-bottom: 35px;
+  }
+}
 main .container.premiumQual .grid .right ul li {
   list-style-type: disc;
   font-family: "inter";
@@ -392,8 +808,19 @@ main .container.premiumQual .grid .right ul li {
   line-height: 150%;
   color: #676767;
 }
+@media screen and (max-width: 1440px) {
+  main .container.premiumQual .grid .right ul li {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.premiumQual .grid .right ul li {
+    font-size: 11px;
+  }
+}
 main .container.premiumQual .grid .right .btn {
   display: inline-flex;
+  width: fit-content;
   align-items: center;
   padding: 20px 26px;
   background-color: #6c5fbc;
@@ -404,35 +831,117 @@ main .container.premiumQual .grid .right .btn {
   text-transform: capitalize;
   text-align: center;
   color: #fff;
+  position: relative;
 }
-main .container.premiumQual .grid .right .btn img {
+main .container.premiumQual .grid .right .btn .btnArrow {
   margin-left: 15px;
 }
-main .container.premiumQual .grid .right .arrow {
+@media screen and (max-width: 1440px) {
+  main .container.premiumQual .grid .right .btn .btnArrow {
+    margin-left: 10px;
+    width: 19px;
+    height: 19px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.premiumQual .grid .right .btn .btnArrow {
+    margin-left: 9px;
+    width: 17px;
+    height: 17px;
+  }
+}
+main .container.premiumQual .grid .right .btn .arrow {
   position: absolute;
   left: 159px;
   bottom: -43px;
 }
+@media screen and (max-width: 1440px) {
+  main .container.premiumQual .grid .right .btn .arrow {
+    left: 93px;
+    bottom: -31px;
+    width: 135px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.premiumQual .grid .right .btn .arrow {
+    left: -80px;
+    bottom: -52px;
+    width: 119px;
+    rotate: 110deg;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.premiumQual .grid .right .btn {
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.premiumQual .grid .right .btn {
+    padding: 13px 17px;
+    font-size: 11px;
+    border-radius: 10px;
+  }
+}
 main .container.premiumQual .grid .left {
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  main .container.premiumQual .grid .left {
+    grid-row: 2;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.premiumQual .grid .left img {
+    width: 264px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.premiumQual .grid .left img {
+    width: 170px;
+  }
 }
 main .container.cardsList3cols h2 {
   width: 100%;
   text-align: center;
   font-weight: 600;
   font-size: 45px;
-  line-height: 57%;
+  line-height: 120%;
   color: #323142;
   margin-bottom: 86px;
 }
 main .container.cardsList3cols h2 span {
   color: #6c5fbc;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols h2 {
+    font-size: 31px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols h2 {
+    font-size: 30px;
+    margin-bottom: 59px;
+  }
+}
 main .container.cardsList3cols .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .grid {
+    gap: 21px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid {
+    gap: 40px;
+    grid-template-columns: 1fr;
+  }
 }
 main .container.cardsList3cols .grid .card {
   border: 1.25px solid #f4f4f6;
@@ -441,12 +950,39 @@ main .container.cardsList3cols .grid .card {
   background: #fff;
   overflow: hidden;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .grid .card {
+    box-shadow: 4px 51px 25px 0 rgba(229, 229, 229, 0.7);
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid .card {
+    box-shadow: 5px 57px 28px 0 rgba(229, 229, 229, 0.7);
+  }
+}
 main .container.cardsList3cols .grid .card .image {
   width: 100%;
   height: 176px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .grid .card .image {
+    height: 125px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid .card .image {
+    height: 140px;
+  }
 }
 main .container.cardsList3cols .grid .card .image img {
+  width: 100%;
   object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid .card .image img {
+    height: 100%;
+  }
 }
 main .container.cardsList3cols .grid .card .con {
   padding-top: 11px;
@@ -454,12 +990,38 @@ main .container.cardsList3cols .grid .card .con {
   padding-left: 33px;
   padding-right: 33px;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .grid .card .con {
+    padding-top: 7px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid .card .con {
+    padding-top: 8px;
+    padding-bottom: 14px;
+    padding-left: 27px;
+    padding-right: 21px;
+  }
+}
 main .container.cardsList3cols .grid .card .con .tag {
   display: inline-block;
   border-radius: 5px;
   padding: 3px 8px;
   font-weight: 400;
   font-size: 12px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .grid .card .con .tag {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid .card .con .tag {
+    font-size: 10px;
+  }
 }
 main .container.cardsList3cols .grid .card .con .tag.colorYellow {
   background: #f7edd0;
@@ -474,6 +1036,16 @@ main .container.cardsList3cols .grid .card .con .name {
   font-size: 25px;
   line-height: 162%;
   color: #323142;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .grid .card .con .name {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid .card .con .name {
+    font-size: 20px;
+  }
 }
 main .container.cardsList3cols .grid .card .con .cardFooter {
   display: flex;
@@ -491,6 +1063,16 @@ main .container.cardsList3cols .grid .card .con .cardFooter .left .time {
   line-height: 133%;
   color: #8e97a6;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .grid .card .con .cardFooter .left .time {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid .card .con .cardFooter .left .time {
+    font-size: 15px;
+  }
+}
 main .container.cardsList3cols .grid .card .con .cardFooter .left .stars {
   display: flex;
   gap: 6px;
@@ -502,8 +1084,42 @@ main .container.cardsList3cols .grid .card .con .cardFooter .left .stars p {
   line-height: 133%;
   color: #8e97a6;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .grid .card .con .cardFooter .left .stars p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid .card .con .cardFooter .left .stars p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .grid .card .con .cardFooter .left .stars img {
+    width: 20px;
+    height: 19px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid .card .con .cardFooter .left .stars img {
+    width: 22px;
+    height: 22px;
+  }
+}
 main .container.cardsList3cols .grid .card .con .cardFooter .right {
   border-radius: 50%;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .grid .card .con .cardFooter .right {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .grid .card .con .cardFooter .right {
+    width: 33px;
+    height: 33px;
+  }
 }
 main .container.cardsList3cols .CLfooter {
   width: 100%;
@@ -511,6 +1127,18 @@ main .container.cardsList3cols .CLfooter {
   justify-content: flex-end;
   margin-top: 66px;
   margin-bottom: 120px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .CLfooter {
+    margin-bottom: 85px;
+    margin-top: 47px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .CLfooter {
+    margin-bottom: 61px;
+    margin-top: 66px;
+  }
 }
 main .container.cardsList3cols .CLfooter a {
   display: flex;
@@ -522,6 +1150,30 @@ main .container.cardsList3cols .CLfooter a {
   letter-spacing: -0.01em;
   color: #acadb9;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .CLfooter a {
+    gap: 14px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .CLfooter a {
+    gap: 20px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList3cols .CLfooter a img {
+    width: 14px;
+    height: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList3cols .CLfooter a img {
+    width: 19px;
+    height: 19px;
+  }
+}
 main .container.cardsList3cols .line {
   width: 100%;
   border-bottom: 1px solid #cbcbcb;
@@ -532,17 +1184,41 @@ main .container.cardsList5cols h2 {
   text-align: center;
   font-weight: 600;
   font-size: 45px;
-  line-height: 57%;
+  line-height: 120%;
   color: #323142;
   margin-bottom: 86px;
 }
 main .container.cardsList5cols h2 span {
   color: #6c5fbc;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols h2 {
+    font-size: 31px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols h2 {
+    font-size: 30px;
+    margin-bottom: 59px;
+  }
+}
 main .container.cardsList5cols .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 30px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid {
+    gap: 22px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid {
+    column-gap: 21px;
+    row-gap: 42;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 main .container.cardsList5cols .grid .card {
   border: 1.25px solid #f4f4f6;
@@ -555,12 +1231,38 @@ main .container.cardsList5cols .grid .card {
   padding-left: 23px;
   padding-right: 23px;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card {
+    padding-top: 26px;
+    padding-bottom: 22px;
+    padding-left: 10px;
+    padding-right: 17px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card {
+    padding-top: 17px;
+    padding-bottom: 19px;
+    padding-left: 15px;
+    padding-right: 18px;
+  }
+}
 main .container.cardsList5cols .grid .card .image {
   width: 100%;
   height: 208px;
   position: relative;
   display: flex;
   align-items: end;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card .image {
+    height: 131px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card .image {
+    height: auto;
+  }
 }
 main .container.cardsList5cols .grid .card .image .foodImage {
   width: 100%;
@@ -571,12 +1273,34 @@ main .container.cardsList5cols .grid .card .image .heart {
   top: 0px;
   right: 0px;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card .image .heart {
+    width: 17px;
+    height: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card .image .heart {
+    width: 15px;
+    height: 13px;
+  }
+}
 main .container.cardsList5cols .grid .card .con .tag {
   display: inline-block;
   border-radius: 5px;
   padding: 3px 8px;
   font-weight: 400;
   font-size: 12px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card .con .tag {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card .con .tag {
+    font-size: 7px;
+  }
 }
 main .container.cardsList5cols .grid .card .con .tag.colorYellow {
   background: #f7edd0;
@@ -596,6 +1320,16 @@ main .container.cardsList5cols .grid .card .con .name {
   line-height: 163%;
   color: #323142;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card .con .name {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card .con .name {
+    font-size: 15px;
+  }
+}
 main .container.cardsList5cols .grid .card .con .ratingTime {
   display: flex;
   align-items: center;
@@ -608,6 +1342,16 @@ main .container.cardsList5cols .grid .card .con .ratingTime .time {
   line-height: 133%;
   color: #8e97a6;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card .con .ratingTime .time {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card .con .ratingTime .time {
+    font-size: 11px;
+  }
+}
 main .container.cardsList5cols .grid .card .con .ratingTime .stars {
   display: flex;
   align-items: center;
@@ -619,6 +1363,28 @@ main .container.cardsList5cols .grid .card .con .ratingTime .stars p {
   font-size: 17px;
   line-height: 133%;
   color: #8e97a6;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card .con .ratingTime .stars p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card .con .ratingTime .stars p {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card .con .ratingTime .stars img {
+    width: 17px;
+    height: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card .con .ratingTime .stars img {
+    width: 16px;
+    height: 17px;
+  }
 }
 main .container.cardsList5cols .grid .card .con .price {
   display: flex;
@@ -637,8 +1403,40 @@ main .container.cardsList5cols .grid .card .con .price .left p span {
   font-size: 18px;
   color: #8e97a6;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card .con .price .left p span {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card .con .price .left p span {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card .con .price .left p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card .con .price .left p {
+    font-size: 16px;
+  }
+}
 main .container.cardsList5cols .grid .card .con .price .right {
   border-radius: 50%;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .grid .card .con .price .right {
+    width: 32px;
+    height: 29px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .grid .card .con .price .right {
+    width: 29px;
+    height: 27px;
+  }
 }
 main .container.cardsList5cols .CLfooter {
   width: 100%;
@@ -646,6 +1444,18 @@ main .container.cardsList5cols .CLfooter {
   justify-content: flex-end;
   margin-top: 66px;
   margin-bottom: 120px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .CLfooter {
+    margin-bottom: 85px;
+    margin-top: 47px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .CLfooter {
+    margin-bottom: 61px;
+    margin-top: 66px;
+  }
 }
 main .container.cardsList5cols .CLfooter a {
   display: flex;
@@ -657,6 +1467,30 @@ main .container.cardsList5cols .CLfooter a {
   letter-spacing: -0.01em;
   color: #acadb9;
 }
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .CLfooter a {
+    gap: 14px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .CLfooter a {
+    gap: 20px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols .CLfooter a img {
+    width: 14px;
+    height: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols .CLfooter a img {
+    width: 19px;
+    height: 19px;
+  }
+}
 main .container.cardsList5cols .line {
   width: 100%;
   border-bottom: 1px solid #cbcbcb;
@@ -667,8 +1501,32 @@ main .container .controlPurchases {
   justify-content: space-between;
   margin-bottom: 138px;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases {
+    margin-bottom: 96px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases {
+    margin-bottom: 105px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
 main .container .controlPurchases .left {
   width: 570px;
+  position: relative;
+}
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .left {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .left {
+    width: 100%;
+    margin-bottom: 100px;
+  }
 }
 main .container .controlPurchases .left h2 {
   font-weight: 700;
@@ -681,11 +1539,33 @@ main .container .controlPurchases .left h2 {
 main .container .controlPurchases .left h2 span {
   color: #6c5fbc;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .left h2 {
+    font-size: 36px;
+    margin-bottom: 34px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .left h2 {
+    margin-bottom: 27px;
+    font-size: 30px;
+  }
+}
 main .container .controlPurchases .left .dateList {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 15px;
+}
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .left .dateList {
+    gap: 11px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .left .dateList {
+    gap: 10px;
+  }
 }
 main .container .controlPurchases .left .dateList .card {
   display: grid;
@@ -700,12 +1580,56 @@ main .container .controlPurchases .left .dateList .card {
   border-radius: 12px;
   background: #fff;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .left .dateList .card {
+    border-radius: 9px;
+    padding-left: 12px;
+    padding-right: 13px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    width: 245px;
+    height: 62px;
+    gap: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .left .dateList .card {
+    border-radius: 8px;
+    padding-left: 12px;
+    padding-right: 13px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    width: 227px;
+    height: 58px;
+    gap: 13px;
+  }
+}
 main .container .controlPurchases .left .dateList .card.active {
   box-shadow: 0 14px 21px 0 rgba(70, 70, 70, 0.1);
   background: #fff;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .left .dateList .card.active {
+    box-shadow: 0 14px 21px 0 rgba(70, 70, 70, 0.1);
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .left .dateList .card.active {
+    box-shadow: 0 13px 20px 0 rgba(70, 70, 70, 0.1);
+  }
+}
 main .container .controlPurchases .left .dateList .card .image {
   width: 77px;
+}
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .left .dateList .card .image {
+    width: 54px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .left .dateList .card .image {
+    width: 51px;
+  }
 }
 main .container .controlPurchases .left .dateList .card .image img {
   width: 100%;
@@ -723,11 +1647,31 @@ main .container .controlPurchases .left .dateList .card .con .name {
   color: #323142;
   margin-bottom: 3px;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .left .dateList .card .con .name {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .left .dateList .card .con .name {
+    font-size: 12px;
+  }
+}
 main .container .controlPurchases .left .dateList .card .con .stts {
   font-weight: 500;
   font-size: 12px;
   line-height: 140%;
   color: #323142;
+}
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .left .dateList .card .con .stts {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .left .dateList .card .con .stts {
+    font-size: 7px;
+  }
 }
 main .container .controlPurchases .left .dateList .card .con .stts.red {
   color: #f1534e;
@@ -739,6 +1683,28 @@ main .container .controlPurchases .left .dateList .card .con .date {
   font-size: 13px;
   line-height: 140%;
   color: #acadb9;
+}
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .left .dateList .card .con .date {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .left .dateList .card .con .date {
+    font-size: 8px;
+  }
+}
+main .container .controlPurchases .left .arrow {
+  display: none;
+  position: absolute;
+  width: 112px;
+  rotate: -90deg;
+  right: 13px;
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .left .arrow {
+    display: block;
+  }
 }
 main .container .controlPurchases .right {
   z-index: 1;
@@ -753,12 +1719,34 @@ main .container .controlPurchases .right .purchases {
   width: 534px;
   background: #fff;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases {
+    width: 379px;
+    padding: 32px 27px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases {
+    width: 100%;
+    padding: 27px 22px;
+  }
+}
 main .container .controlPurchases .right .purchases .hdr {
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 38px;
+}
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .hdr {
+    margin-bottom: 27px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .hdr {
+    margin-bottom: 22px;
+  }
 }
 main .container .controlPurchases .right .purchases .hdr .hdrName {
   font-family: "Manrope";
@@ -768,6 +1756,16 @@ main .container .controlPurchases .right .purchases .hdr .hdrName {
   letter-spacing: 0.01em;
   color: #1a202c;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .hdr .hdrName {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .hdr .hdrName {
+    font-size: 16px;
+  }
+}
 main .container .controlPurchases .right .purchases .cardsList {
   z-index: 1;
   display: flex;
@@ -775,10 +1773,32 @@ main .container .controlPurchases .right .purchases .cardsList {
   flex-direction: column;
   gap: 22px;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .cardsList {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .cardsList {
+    gap: 13px;
+  }
+}
 main .container .controlPurchases .right .purchases .cardsList .card {
   border: 1.57px solid #edf2f7;
   border-radius: 19px;
   padding: 25px;
+}
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .cardsList .card {
+    border-radius: 13px;
+    padding: 17px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .cardsList .card {
+    border-radius: 11px;
+    padding: 14px;
+  }
 }
 main .container .controlPurchases .right .purchases .cardsList .card .con {
   margin-bottom: 21px;
@@ -786,12 +1806,42 @@ main .container .controlPurchases .right .purchases .cardsList .card .con {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con {
+    margin-bottom: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con {
+    margin-bottom: 12px;
+  }
+}
 main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft {
   display: flex;
   gap: 19px;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft {
+    gap: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft {
+    gap: 11px;
+  }
+}
 main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .image {
   width: 50px;
+}
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .image {
+    width: 35px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .image {
+    width: 29px;
+  }
 }
 main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .image img {
   width: 100%;
@@ -805,6 +1855,18 @@ main .container .controlPurchases .right .purchases .cardsList .card .con .purch
   color: #1a202c;
   margin-bottom: 3px;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .name {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .name {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+}
 main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .desc {
   font-family: "Manrope";
   font-weight: 500;
@@ -812,6 +1874,16 @@ main .container .controlPurchases .right .purchases .cardsList .card .con .purch
   line-height: 150%;
   letter-spacing: 0.04em;
   color: #a0aec0;
+}
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .desc {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseleft .desc {
+    font-size: 9px;
+  }
 }
 main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseright p {
   font-family: "Manrope";
@@ -822,10 +1894,30 @@ main .container .controlPurchases .right .purchases .cardsList .card .con .purch
   text-align: right;
   color: #1a202c;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseright p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .con .purchaseright p {
+    font-size: 13px;
+  }
+}
 main .container .controlPurchases .right .purchases .cardsList .card .prgrBar {
   border-radius: 79px;
   width: 100%;
   height: 9px;
+}
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .prgrBar {
+    height: 7px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right .purchases .cardsList .card .prgrBar {
+    height: 6px;
+  }
 }
 main .container .controlPurchases .right .purchases .cardsList .card .prgrBar.main {
   background: #e2dff2;
@@ -835,7 +1927,7 @@ main .container .controlPurchases .right .purchases .cardsList .card .prgrBar.or
 }
 main .container .controlPurchases .right .purchases .cardsList .card .prgrBar .line {
   border-radius: 79px;
-  height: 9px;
+  height: 100%;
   opacity: 1;
 }
 main .container .controlPurchases .right .purchases .cardsList .card .prgrBar .line.main {
@@ -856,8 +1948,34 @@ main .container .controlPurchases .right::before {
   opacity: 0.2;
   bottom: -100px;
 }
+@media screen and (max-width: 1440px) {
+  main .container .controlPurchases .right::before {
+    border-radius: 9px;
+    width: 331px;
+    height: 255px;
+    filter: blur(86.54148865px);
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container .controlPurchases .right::before {
+    border-radius: 8px;
+    width: 276px;
+    height: 212px;
+    filter: blur(72.09049988px);
+  }
+}
 main .container.comments {
   margin-bottom: 182px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.comments {
+    margin-bottom: 129px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments {
+    margin-bottom: 103px;
+  }
 }
 main .container.comments h2 {
   width: 100%;
@@ -871,28 +1989,45 @@ main .container.comments h2 {
 main .container.comments h2 span {
   color: #6c5fbc;
 }
-main .container.comments .commentsList {
-  display: flex;
-  gap: 10px;
+@media screen and (max-width: 1440px) {
+  main .container.comments h2 {
+    font-size: 31px;
+  }
 }
-main .container.comments .commentsList .commentShdw {
+@media screen and (max-width: 1024px) {
+  main .container.comments h2 {
+    font-size: 30px;
+  }
+}
+main .container.comments .commentsBlock {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+main .container.comments .commentsBlock .commentsList {
+  display: flex;
+  width: 100%;
+}
+main .container.comments .commentsBlock .commentsList .commentShdw {
   position: relative;
   display: flex;
   justify-content: center;
-}
-main .container.comments .commentsList .commentShdw::before {
-  content: "";
-  border-radius: 20px;
   width: 574px;
-  height: 350px;
-  filter: blur(184.39422607px);
-  background: #323142;
-  opacity: 0.2;
-  top: 31px;
-  position: absolute;
-  z-index: -1;
+  height: 346px;
 }
-main .container.comments .commentsList .commentShdw .comment {
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw {
+    width: 408px;
+    height: 270px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw {
+    width: 342px;
+    height: 227px;
+  }
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment {
   border-radius: 20px;
   z-index: 1;
   padding: 38px 43px;
@@ -900,46 +2035,127 @@ main .container.comments .commentsList .commentShdw .comment {
   width: 528px;
   height: 346px;
 }
-main .container.comments .commentsList .commentShdw .comment.hidden {
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment {
+    padding: 27px 30px;
+    border-radius: 14px;
+    width: 376px;
+    height: 247px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment {
+    padding: 22px 25px;
+    border-radius: 12px;
+    width: 315px;
+    height: 207px;
+  }
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment.hidden {
   height: 239px;
 }
-main .container.comments .commentsList .commentShdw .comment .hdr {
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment.hidden {
+    height: 171px;
+  }
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment.hidden .hdr {
+  display: none;
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr {
   display: flex;
   gap: 21px;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 32px;
 }
-main .container.comments .commentsList .commentShdw .comment .hdr.hidden {
-  display: none;
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr {
+    margin-bottom: 23px;
+  }
 }
-main .container.comments .commentsList .commentShdw .comment .hdr .left {
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr {
+    margin-bottom: 19px;
+  }
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left {
   display: flex;
   gap: 21px;
   align-items: center;
 }
-main .container.comments .commentsList .commentShdw .comment .hdr .left .image {
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left {
+    gap: 12px;
+  }
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left .image {
   width: 71px;
   border-radius: 50%;
   overflow: hidden;
 }
-main .container.comments .commentsList .commentShdw .comment .hdr .left .image img {
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left .image {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left .image {
+    width: 42px;
+  }
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left .image img {
   width: 100%;
 }
-main .container.comments .commentsList .commentShdw .comment .hdr .left .data .name {
+main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left .data .name {
   font-weight: 500;
   font-size: 20px;
   line-height: 150%;
   color: #030314;
 }
-main .container.comments .commentsList .commentShdw .comment .hdr .left .data .desc {
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left .data .name {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left .data .name {
+    font-size: 12px;
+  }
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left .data .desc {
   font-family: "Quicksand";
   font-weight: 500;
   font-size: 16px;
   line-height: 156%;
   color: #5e5d5d;
 }
-main .container.comments .commentsList .commentShdw .comment .text {
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left .data .desc {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .left .data .desc {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .quote {
+    width: 43px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .hdr .quote {
+    width: 36;
+  }
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment .text {
   font-style: italic;
   font-weight: 400;
   font-size: 18px;
@@ -947,6 +2163,86 @@ main .container.comments .commentsList .commentShdw .comment .text {
   text-align: justify;
   color: #636363;
   margin-bottom: 38px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .text {
+    font-size: 12px;
+    margin-bottom: 27px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .text {
+    font-size: 10px;
+    margin-bottom: 23px;
+  }
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment .stars {
+  display: flex;
+  gap: 6px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .stars {
+    gap: 4px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .stars {
+    gap: 3px;
+  }
+}
+main .container.comments .commentsBlock .commentsList .commentShdw .comment .stars img {
+  width: auto;
+}
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .stars img {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .commentsList .commentShdw .comment .stars img {
+    width: 15px;
+    height: 15px;
+  }
+}
+main .container.comments .commentsBlock .nav {
+  right: 0px;
+  bottom: 0px;
+  width: 667px;
+  height: 11px;
+  z-index: 11111111111111;
+  position: absolute;
+  border-radius: 50px;
+  background-color: #e2dff2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+@media screen and (max-width: 1440px) {
+  main .container.comments .commentsBlock .nav {
+    bottom: 23px;
+    width: 460px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.comments .commentsBlock .nav {
+    bottom: -24px;
+    width: 100%;
+  }
+}
+main .container.comments .commentsBlock .nav .navItem {
+  display: flex;
+  flex-grow: 1;
+  cursor: pointer;
+}
+main .container.comments .commentsBlock .nav .scroll {
+  position: absolute;
+  height: 100%;
+  border-radius: 50px;
+  left: 0px;
+  right: 0px;
+  background-color: #6c5fbc;
+  transition-duration: 500ms;
 }
 main .container.subForm .block {
   padding: 61px 66px;
@@ -958,12 +2254,45 @@ main .container.subForm .block {
   background-size: auto 100%;
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+@media screen and (max-width: 1440px) {
+  main .container.subForm .block {
+    border-radius: 21px;
+    height: 199px;
+    padding: 45px 47px;
+    padding-right: 51px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.subForm .block {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-radius: 15px;
+    padding: 60px 27px ;
+    height: 256px;
+  }
 }
 main .container.subForm .block form .text {
   padding-bottom: 37.5px;
   font-weight: 800;
   font-size: 70px;
   color: rgba(249, 249, 249, 0.8);
+}
+@media screen and (max-width: 1440px) {
+  main .container.subForm .block form .text {
+    font-size: 49px;
+    padding-bottom: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.subForm .block form .text {
+    text-align: center;
+    font-size: 41px;
+    padding-bottom: 15px;
+  }
 }
 main .container.subForm .block form .inputBlock {
   border-radius: 10px;
@@ -973,6 +2302,21 @@ main .container.subForm .block form .inputBlock {
   padding: 5px;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1440px) {
+  main .container.subForm .block form .inputBlock {
+    border-radius: 10px;
+    box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.1);
+    width: 312px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.subForm .block form .inputBlock {
+    box-shadow: 0 5px 29px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    padding: 6px 7px;
+    width: 100%;
+  }
 }
 main .container.subForm .block form .inputBlock .btn {
   border-radius: 8px;
@@ -985,9 +2329,34 @@ main .container.subForm .block form .inputBlock .btn {
   background: #6c5fbc;
   cursor: pointer;
 }
+@media screen and (max-width: 1440px) {
+  main .container.subForm .block form .inputBlock .btn {
+    padding: 11px 17px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.subForm .block form .inputBlock .btn {
+    padding: 10px 16px;
+    border-radius: 7px;
+    font-size: 9px;
+  }
+}
 main .container.subForm .block form .inputBlock input {
   width: 220px;
   padding-left: 22px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.subForm .block form .inputBlock input {
+    padding-left: 10px;
+    width: 185px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.subForm .block form .inputBlock input {
+    width: 100%;
+  }
 }
 main .container.subForm .block form .inputBlock input::placeholder {
   font-weight: 400;
@@ -996,8 +2365,38 @@ main .container.subForm .block form .inputBlock input::placeholder {
   text-transform: capitalize;
   color: #878787;
 }
+@media screen and (max-width: 1440px) {
+  main .container.subForm .block form .inputBlock input::placeholder {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.subForm .block form .inputBlock input::placeholder {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.subForm .block .image {
+    position: absolute;
+    width: 169px;
+    font-size: 10px;
+    top: calc(100% - 80px);
+  }
+}
 main .container.subForm .block .image img {
   transform: translate(0px, 15px);
+}
+@media screen and (max-width: 1440px) {
+  main .container.subForm .block .image img {
+    transform: translate(0px, 8px);
+    width: 194px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.subForm .block .image img {
+    width: 169px;
+    font-size: 10px;
+  }
 }
 footer {
   margin-top: 216px;
@@ -1009,21 +2408,77 @@ footer {
   padding-bottom: 81px;
   background: #eaeaea;
 }
+@media screen and (max-width: 1440px) {
+  footer {
+    margin-top: 153px;
+    padding-top: 98px;
+    padding-bottom: 57px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer {
+    margin-top: 198px;
+    padding-top: 55px;
+    padding-bottom: 36px;
+  }
+}
+footer .container {
+  position: relative;
+}
 footer .container .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 44px;
 }
+@media screen and (max-width: 1440px) {
+  footer .container .menu {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer .container .menu {
+    justify-content: flex-start;
+    align-items: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 53px;
+    margin-bottom: 32px;
+  }
+}
 footer .container .menu .left .logo {
   width: 150px;
+}
+@media screen and (max-width: 1440px) {
+  footer .container .menu .left .logo {
+    width: 107px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer .container .menu .left .logo {
+    width: 99px;
+  }
 }
 footer .container .menu .left .logo img {
   width: 100%;
 }
 footer .container .menu .right ol {
-  display: flex;
   gap: 70px;
+  display: flex;
+}
+@media screen and (max-width: 1440px) {
+  footer .container .menu .right ol {
+    margin-bottom: 20px;
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer .container .menu .right ol {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 footer .container .menu .right ol li a {
   font-family: "inter";
@@ -1033,13 +2488,40 @@ footer .container .menu .right ol li a {
   text-transform: capitalize;
   color: #999;
 }
+@media screen and (max-width: 1440px) {
+  footer .container .menu .right ol li a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer .container .menu .right ol li a {
+    font-size: 14px;
+    line-height: 135%;
+    text-transform: uppercase;
+  }
+}
 footer .container .bottomline {
   margin-bottom: 57px;
+}
+@media screen and (max-width: 1440px) {
+  footer .container .bottomline {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer .container .bottomline {
+    margin-bottom: 26px;
+  }
 }
 footer .container .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  footer .container .info {
+    justify-content: center;
+  }
 }
 footer .container .info .left p {
   font-family: "inter";
@@ -1048,7 +2530,40 @@ footer .container .info .left p {
   line-height: 147%;
   color: #999;
 }
+@media screen and (max-width: 1440px) {
+  footer .container .info .left p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer .container .info .left p {
+    font-size: 13px;
+    text-align: center;
+    width: fit-content;
+  }
+}
 footer .container .info .right {
   display: flex;
   gap: 53px;
+}
+@media screen and (max-width: 1440px) {
+  footer .container .info .right {
+    gap: 38px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer .container .info .right {
+    gap: 20px;
+    position: absolute;
+    top: 0px;
+    right: 31px;
+    height: 38px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1440px) {
+  footer .container .info .right img {
+    width: 15px;
+    height: 15px;
+  }
 }

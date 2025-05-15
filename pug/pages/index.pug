@@ -8,9 +8,13 @@ html
     head
         title My Site
         link(href="./css/style.css", rel="stylesheet")
+        link(href="./libs/owlcarousel/assets/owl.carousel.min.css", rel="stylesheet")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-
+        script(src="./libs/jquery-3.7.1.min.js")  
+        script(src="./libs/owlcarousel/owl.carousel.min.js")  
+        script(src="./js/main.js")  
+        //- script(src="./node_modules/owl.carousel/dist/owl.carousel.min.js") 
     body(class="relative")
         header
             div.container
@@ -30,6 +34,8 @@ html
                     div.hdrRight
                         a(href="", class="login") Login
                         a(href="", class="sign") Sign up
+                    div.hdrRightMobile
+                        img(src="./images/menu.svg", alt="") 
            
                 .bottomline
 
@@ -47,7 +53,7 @@ html
                         a(href="", class="start") Get Started
                         a(href="", class="go") Go Pro
                     div.rating 
-                        img(src="./images/trustpilot-1 1.png", alt="")
+                        img(src="./images/trustpilot-1 1.png", alt="").trustpilot
                         div.stars
                             ol 
                                 li
@@ -89,10 +95,9 @@ html
                         ul 
                             li Premium quality food is made with ingredients that are packed with essential vitamins, minerals.
                             li These foods promote overall wellness by support healthy digestion and boosting immunity
-                        a.btn Download <img src="./images/btnArrow.png">
-                            
-                        img(src="./images/arrow.png", alt="", class="arrow") 
-                .line 
+                        a.btn Download <img class="btnArrow"src="./images/btnArrow.png">
+                            img(src="./images/arrow.png", alt="", class="arrow") 
+                .bottomline 
             //- ===========================================
             div.container.cardsList3cols
                 h2 Our Top <span>Restaurants</span>
@@ -126,7 +131,8 @@ html
                             +dateCard({image: "./images/dateCards/Food Image1.png", name: "Chicken Hell",stts: "On The Way",date: "3:09 PM",sttsColor: "",act: "active"})
                             +dateCard({image: "./images/dateCards/Food Image2.png", name: "Swe Dish",stts: "Delivered",date: "Yesterday",sttsColor: "",act: ""})
                             +dateCard({image: "./images/dateCards/Food Image3.png", name: "Fish Hell Veg",stts: "Cancelled",date: "Yesterday",sttsColor: "red",act: ""})
-
+                        img(src="./images/arrow.png", alt="", class="arrow")     
+                    
                     .right 
                         .purchases    
                             .hdr 
@@ -145,9 +151,19 @@ html
             //- ===========================================
             div.container.comments
                 h2 <span>Customer</span> Say
-                .commentsList 
-                    +comment({image: "./images/man.png", name: "Alexander R.",desc: "01 Year With Us ",stars: 5,showTitle: "", text: "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time"})
-                    +comment({image: "./images/man.png", name: "Alexander R.",desc: "01 Year With Us ",stars: 3,showTitle: "hidden", text: "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time"})
+                .commentsBlock
+                    .commentsList.owl-theme.owl-carousel
+                        +comment({slideId: 0,image: "./images/man.png", name: "Alexander R.",desc: "01 Year With Us ",stars: 5,showTitle: "", text: "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time 1"})
+                        +comment({slideId: 1,image: "./images/man.png", name: "Alexander R.",desc: "01 Year With Us ",stars: 3,showTitle: "hidden", text: "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time 2"})
+                        +comment({slideId: 2,image: "./images/man.png", name: "Alexander R.",desc: "01 Year With Us ",stars: 3,showTitle: "hidden", text: "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time 3"})
+                        +comment({slideId: 3,image: "./images/man.png", name: "Alexander R.",desc: "01 Year With Us ",stars: 3,showTitle: "hidden", text: "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time 4"})
+                    .nav
+                        .scroll
+                        dic(class="navItem niId-0", data-id=0)
+                        dic(class="navItem niId-1", data-id=1)
+                        dic(class="navItem niId-2", data-id=2)
+                        dic(class="navItem niId-3", data-id=3)
+                
             //- ===========================================
             div.container.subForm
                 .block 
