@@ -2025,6 +2025,7 @@ main .container.comments .commentsBlock .commentsList .commentShdw {
   main .container.comments .commentsBlock .commentsList .commentShdw {
     width: 342px;
     height: 227px;
+    justify-content: flex-start;
   }
 }
 main .container.comments .commentsBlock .commentsList .commentShdw .comment {
