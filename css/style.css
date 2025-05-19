@@ -81,6 +81,62 @@
   font-family: "Poppins";
   box-sizing: border-box;
 }
+.sliderInputCss {
+  /********** Стили диапазонного элемента ввода (слайдера) **********/
+  /* Сбрасываем стили по умолчанию */
+  /* Удаляем фокусировку по умолчанию */
+  /***** Стили для Chrome, Safari, Opera и Edge Chromium *****/
+  /* дорожка слайдера */
+  /* ползунок слайдера */
+  /******** Стили для Firefox ********/
+  /* дорожка слайдера */
+  /* ползунок слайдера */
+}
+.sliderInputCss input {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+.sliderInputCss input:focus {
+  outline: none;
+}
+.sliderInputCss input::-webkit-slider-runnable-track {
+  border: 0.88px solid #6c5fbc;
+  border-radius: 9px;
+  background: #6c5fbc;
+  height: 5px;
+}
+.sliderInputCss input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Переопределяем вид по умолчанию */
+  appearance: none;
+  margin-top: -12px;
+  /* Установим ползунок по центру дорожки */
+  /* пользовательские стили */
+  border-radius: 100%;
+  background-color: #6c5fbc;
+  border: 4.4px solid #bbb6d7;
+  width: 26px;
+  height: 26px;
+}
+.sliderInputCss input::-moz-range-track {
+  border: 0.88px solid #6c5fbc;
+  border-radius: 9px;
+  background: #6c5fbc;
+}
+.sliderInputCss input::-moz-range-thumb {
+  border: none;
+  /* Удаляем лишнюю рамку, которую добавляет FF */
+  border-radius: 0;
+  /* Удаляем border-radius по умолчанию от FF */
+  /* пользовательские стили */
+  border-radius: 100%;
+  background-color: #6c5fbc;
+  border: 4.4px solid #bbb6d7;
+  width: 26px;
+  height: 26px;
+}
 body {
   background-color: #f9f9f9;
 }
@@ -2793,6 +2849,569 @@ main .container.accprdionList {
 @media screen and (max-width: 1024px) {
   main .container.accprdionList {
     gap: 15px;
+  }
+}
+main .container.pageMenuTitleBlock {
+  margin-bottom: 136px;
+  margin-top: 114px;
+}
+main .container.pageMenuTitleBlock .grid {
+  display: grid;
+  grid-template-columns: 757px 377px;
+  gap: 113px;
+  row-gap: 0px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid {
+    grid-template-columns: 538px 268px;
+    gap: 80px;
+    row-gap: 0px;
+    margin-top: 85px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid {
+    margin-top: 46px;
+    display: block;
+  }
+}
+main .container.pageMenuTitleBlock .grid .left {
+  position: relative;
+}
+main .container.pageMenuTitleBlock .grid .left::after {
+  content: "";
+  background-image: url("../images/menuPTopSliderLines.svg");
+  background-size: 100% 100%;
+  width: 51.81px;
+  height: 36.39px;
+  position: absolute;
+  right: -50px;
+  top: -34px;
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .left::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .left {
+    margin-bottom: 52px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .left .slider .owl-dots {
+  display: none;
+}
+main .container.pageMenuTitleBlock .grid .left .slider .slide {
+  width: 100%;
+  height: 306px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .left .slider .slide {
+    height: 217px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .left .slider .slide {
+    height: auto;
+  }
+}
+main .container.pageMenuTitleBlock .grid .left .slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .container.pageMenuTitleBlock .grid .left .sliderPgntn {
+  margin-top: 5px;
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  margin-bottom: 88px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .left .sliderPgntn {
+    margin-bottom: 62px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .left .sliderPgntn {
+    display: none;
+  }
+}
+main .container.pageMenuTitleBlock .grid .left .sliderPgntn .item {
+  cursor: pointer;
+  border-radius: 56px;
+  width: 29px;
+  height: 5px;
+  background-color: #dbd9ee;
+  transition-duration: 200ms;
+}
+main .container.pageMenuTitleBlock .grid .left .sliderPgntn .item.active {
+  width: 61px;
+  background-color: #6c5fbc;
+}
+main .container.pageMenuTitleBlock .grid .searchSwitch .sarch {
+  width: 100%;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .sarch {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .sarch {
+    margin-bottom: 18px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .searchSwitch .sarch .inputBlock {
+  width: 100%;
+  margin-bottom: 35px;
+  display: flex;
+  gap: 29px;
+  padding-top: 21px;
+  padding-bottom: 19px;
+  padding-left: 28px;
+  padding-right: 28px;
+  border-radius: 19px;
+  background-color: #ededed;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .sarch .inputBlock {
+    border-radius: 13px;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .sarch .inputBlock {
+    border-radius: 8px;
+    padding: 14px;
+    gap: 27px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .sarch .inputBlock img {
+    width: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .sarch .inputBlock img {
+    width: 26px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .searchSwitch .sarch .inputBlock input {
+  width: -webkit-fill-available;
+}
+main .container.pageMenuTitleBlock .grid .searchSwitch .sarch .inputBlock input::placeholder {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 117%;
+  letter-spacing: -0.02em;
+  color: #aaabba;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .sarch .inputBlock input::placeholder {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .sarch .inputBlock input::placeholder {
+    font-size: 12px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .searchSwitch .switcher {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .container.pageMenuTitleBlock .grid .searchSwitch .switcher .item {
+  cursor: pointer;
+  border: 2.17px solid;
+  border-color: #6c5fbc;
+  border-radius: 15px 0 0 15px;
+  height: 74px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 19px;
+  text-align: center;
+  color: #6c5fbc;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .switcher .item {
+    border: 1.54px solid;
+    font-size: 13px;
+    border-radius: 11px 0 0 11px;
+    height: 53px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .switcher .item {
+    border: 0.9px solid;
+    font-size: 12px;
+    border-radius: 6px 0 0 6px;
+    height: 51px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .searchSwitch .switcher .item.active {
+  background: #6c5fbc;
+  color: #f3f5f6;
+}
+main .container.pageMenuTitleBlock .grid .searchSwitch .switcher .item:nth-last-child(1) {
+  border-radius: 0 15px 15px 0;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .switcher .item:nth-last-child(1) {
+    border-radius: 0 11px 11px 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .searchSwitch .switcher .item:nth-last-child(1) {
+    border-radius: 0 6px 6px 0;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right {
+  padding: 32px;
+  background-color: #fff;
+  box-shadow: 10px 25px 60px 0 rgba(0, 90, 100, 0.2);
+  border-radius: 24px;
+  grid-row: 2 span;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right {
+    box-shadow: 7px 18px 43px 0 rgba(0, 90, 100, 0.2);
+    padding: 23px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right {
+    box-shadow: 8px 21px 50px 0 rgba(0, 90, 100, 0.2);
+    padding: 27px;
+    grid-row: none;
+    margin-bottom: 79px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .title {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 135%;
+  color: #323142;
+  margin-bottom: 17px;
+}
+main .container.pageMenuTitleBlock .grid .right .title.sb {
+  margin-bottom: 13px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .title.sb {
+    margin-bottom: 9px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .title.sb {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .title {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .title {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .foodList {
+  display: flex;
+  gap: 13px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList {
+    margin-bottom: 21px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 14px;
+  width: 66px;
+  height: 96px;
+  padding: 16px 0px;
+  box-shadow: 0 15px 22px 0 rgba(135, 125, 200, 0.25);
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList .food {
+    box-shadow: 0 10px 16px 0 rgba(135, 125, 200, 0.25);
+    border-radius: 10px;
+    padding: 11px 0px;
+    width: 47px;
+    height: 68px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList .food {
+    box-shadow: 0 12px 18px 0 rgba(135, 125, 200, 0.25);
+    border-radius: 12px;
+    padding: 13px 0px;
+    width: 55px;
+    height: 80px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food img {
+  height: 35px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList .food img {
+    height: 26px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList .food img {
+    height: 28px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food.Pizza {
+  background-color: #FFDE8A;
+  color: #d69900;
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food.Pizza.active {
+  border-color: #b98501;
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food.Asian {
+  background-color: #F7C5BA;
+  color: #fb471d;
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food.Asian.active {
+  border-color: rgba(251, 71, 29, 0.5);
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food.Donat {
+  background-color: #EDB66B;
+  color: #e28b14;
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food.Donat.active {
+  border-color: #bb7615;
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food.Ice {
+  background-color: #5A85FF;
+  color: #002073;
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food.Ice.active {
+  border-color: #274797;
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food.active {
+  box-shadow: 0 16px 25px 0 rgba(135, 125, 200, 0.25);
+  width: 73px;
+  height: 107px;
+  border: 3.83px solid;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList .food.active {
+    border-radius: 11px;
+    width: 52px;
+    height: 76px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList .food.active {
+    border-radius: 13px;
+    width: 61px;
+    height: 90px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food.active img {
+  height: 42px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList .food.active img {
+    height: 32px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList .food.active img {
+    height: 34px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .foodList .food p {
+  font-weight: 500;
+  font-size: 11px;
+  text-align: center;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList .food p {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .foodList .food p {
+    font-size: 10px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .sortByBlock {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 29px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .sortByBlock {
+    gap: 6px;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .sortByBlock {
+    gap: 7px;
+    margin-bottom: 23px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .sortByBlock .sortByRow {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 187%;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .sortByBlock .sortByRow {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .sortByBlock .sortByRow {
+    font-size: 12px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .sortByBlock .sortByRow p:nth-child(1) {
+  color: #acadb9;
+}
+main .container.pageMenuTitleBlock .grid .right .sortByBlock .sortByRow p:nth-child(2) {
+  color: #6c5fbc;
+}
+main .container.pageMenuTitleBlock .grid .right .sliderInputCss {
+  margin-bottom: 12px;
+  /* ползунок слайдера */
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .sliderInputCss {
+    margin-bottom: 6px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .sliderInputCss {
+    margin-bottom: 8px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .sliderInputCss input {
+  width: 100%;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .sliderInputCss input::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .sliderInputCss input::-webkit-slider-runnable-track {
+    height: 4px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .sliderInputCss input::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+    margin-top: -8px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .sliderInputCss input::-webkit-slider-thumb {
+    width: 22px;
+    height: 22px;
+    margin-top: -10px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .sliderInputCss input::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    margin-top: -8px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .sliderInputCss input::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .rangeList {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .rangeList {
+    margin-bottom: 26px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .rangeList {
+    margin-bottom: 32px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .rangeList p {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 281%;
+  color: #c2c3cb;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .rangeList p {
+    font-size: 7px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .rangeList p {
+    font-size: 8px;
+  }
+}
+main .container.pageMenuTitleBlock .grid .right .apply {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  border-radius: 14px;
+  background: #6c5fbc;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  color: #fff3eb;
+}
+@media screen and (max-width: 1440px) {
+  main .container.pageMenuTitleBlock .grid .right .apply {
+    height: 42px;
+    font-size: 9px;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.pageMenuTitleBlock .grid .right .apply {
+    height: 50px;
+    font-size: 11px;
+    border-radius: 11px;
   }
 }
 footer {

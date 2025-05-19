@@ -15,7 +15,20 @@ function callback(event) {
 
     $(".scroll").css("left", $(".navItem").width() * page + "px")
 }
+// function callbackInitMenuPage(event) {
+//     // Provided by the core
+//     var element   = event.target;         // DOM element, in this example .owl-carousel
+//     var name      = event.type;           // Name of the event, in this example dragged
+//     var namespace = event.namespace;      // Namespace of the event, in this example owl.carousel
+//     var items     = event.item.count;     // Number of items
+//     var item      = event.item.index;     // Position of the current item
+//     // Provided by the navigation plugin
+//     var pages     = event.page.count;     // Number of pages
+//     var page      = event.page.index;     // Position of the current page
+//     var size      = event.page.size;      // Number of items per page
+//     console.log(event)
 
+// }
 $(document).ready(function(){
 
 
@@ -35,17 +48,18 @@ $(document).ready(function(){
 
     $('.commentsList').owlCarousel({
         autoWidth:true,
-        autoHeightClass: 'blogCard-height',
+        autoHeightClass: 'blogCard-height', 
         autoHeight:true,
         slideSpeed : 500,
     //    autoplay:true,
         items : 2,
         itemsMobile : true, 
         loop:true,
-        onDragged: callback,
-
+         onDragged: callback,
 
     });
+
+
     $(".openMenuBtn").click(function (e) { 
      
       $(".mainMenuPopUp").removeClass("hidden")

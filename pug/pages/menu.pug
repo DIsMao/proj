@@ -15,6 +15,8 @@ html
         script(src="./libs/jquery-3.7.1.min.js")  
         script(src="./libs/owlcarousel/owl.carousel.min.js")  
         script(src="./js/main.js")  
+        script(src="./pages/manu/js/date.js") 
+        script(src="./pages/manu/js/script.js") 
         //- script(src="./node_modules/owl.carousel/dist/owl.carousel.min.js") 
     body(class="relative")
         header
@@ -42,6 +44,60 @@ html
 
         main()
 
+            .container.pageMenuTitleBlock
+                .grid
+                    .left
+                        .slider.pageMenuSliderTop.owl-theme.owl-carousel
+                            .slide
+                                img(src="./images/Banner.png", alt="")
+                            .slide
+                                img(src="./images/Banner.png", alt="")
+                            .slide
+                                img(src="./images/Banner.png", alt="")
+                        .sliderPgntn
+                    .right
+                        .title Category
+                        .foodList 
+                            .food.Pizza 
+                                img(src="./images/foodIcons/Pizza.png", alt="")
+                                p Pizza
+                            .food.Asian.active
+                                img(src="./images/foodIcons/Hotdog.png", alt="")
+                                p Asian
+                            .food.Donat 
+                                img(src="./images/foodIcons/Doughnut.png", alt="")
+                                p Donat
+                            .food.Ice 
+                                img(src="./images/foodIcons/Icecream.png", alt="")
+                                p Ice
+                        
+                        .title.sb Sort By
+                        .sortByBlock
+                            .sortByRow 
+                                p Recomended
+                                p Fast Delivery
+                            .sortByRow 
+                                p Most Popular
+                                p 
+                        .title Price
+                        .sliderInputCss
+                            input(type="range", value="0", max="100").sortByInputSlider
+                        .rangeList 
+                            p $0
+                            p $25
+                            p $50
+                            p $100
+                            p $500
+                            p $1000
+                        .apply.button Apply
+                    .searchSwitch
+                        .sarch
+                            .inputBlock
+                                img(src="./images/menuPSearch.svg", alt="")
+                                input(placeholder="Search")
+                        .switcher
+                            .item Food
+                            .item.active Resturent              
             //- ===========================================
             .container
                 .blockHdrType1
