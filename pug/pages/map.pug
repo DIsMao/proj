@@ -1,0 +1,164 @@
+include ../components/bigCard.pug
+include ../components/littleCard.pug
+include ../components/dateCard.pug
+include ../components/purchaseCards.pug
+include ../components/comment.pug
+include ../components/accordion.pug
+doctype html
+html
+    head
+        title My Site
+        link(href="./css/style.css", rel="stylesheet")
+        link(href="./libs/owlcarousel/assets/owl.carousel.min.css", rel="stylesheet")
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src="./libs/jquery-3.7.1.min.js")  
+        script(src="./libs/owlcarousel/owl.carousel.min.js")  
+        script(src="./js/main.js")  
+        script(src="./pages/menuResturent/js/script.js") 
+        //- script(src="./node_modules/owl.carousel/dist/owl.carousel.min.js") 
+    body(class="relative")
+        header
+            div.container
+                .mainMenu
+                    div.hdrLeft
+                        a(href="./") 
+                            img(src="./images/Logo.png", alt="")
+                        ol 
+                            li 
+                                a(href="./menu.html") Menu
+                            li 
+                                a(href="") Blog
+                            li 
+                                a(href="") Pricing
+                            li 
+                                a(href="") Contact
+                    div.hdrRight
+                        a(href="", class="login") Login
+                        a(href="", class="sign") Sign up
+                    div.hdrRightMobile
+                        img(src="./images/menu.svg", alt="", class="openMenuBtn") 
+           
+                .bottomline
+
+        main()
+            //- ===========================================
+            .container.map
+                .mapImage
+                    img(src="./images/Map.svg", alt="")
+                .worker
+                    .hdr
+                    .con
+                        .row 
+                            .image
+                                
+                                img(src="./images/Locatin.svg", alt="")
+                                .dotedLine
+                            .text
+                                p Your Address
+                                p Horizenal Road Stree 1178 <br> California, USA
+
+                        .row 
+                            .image
+                                img(src="./images/Locatin.svg", alt="")
+                                
+                            .text
+                                p Your Address
+                                p Horizenal Road Stree 1178 <br> California, USA
+                    .btn
+
+                
+            //- ===========================================
+            div.container.subForm
+                .block 
+                    form
+                        p.text GET 50%
+                        .inputBlock 
+                            input(type="text", placeholder="Enter Your Email Address")
+                            .btn subscribe
+                    .image 
+                        img(src="./images/formImg.png", alt="")
+        footer 
+            .container
+                .menu 
+                    .left 
+                        a(href="./").logo 
+                            img(src="./images/Logo.png", alt="")
+                    .right
+                        ol 
+                            li 
+                                a(href="") Blog
+                            li 
+                                a(href="") Pricing
+                            li 
+                                a(href="") About Us
+                            li 
+                                a(href="") Contact
+                .bottomline
+                .info 
+                    .left 
+                        p © 2023 EATLY All Rights Reserved.
+                    .right
+                        a(href="")
+                            img(src="./images/social/f.svg", alt="") 
+                        a(href="")
+                            img(src="./images/social/in.svg", alt="") 
+                        a(href="")
+                            img(src="./images/social/inst.svg", alt="") 
+                        a(href="")
+                            img(src="./images/social/tw.svg", alt="") 
+        .mainMenuPopUp.hidden
+            .hdr 
+                img(src="./images/closeCross.svg", alt="", class="closeMMenuBtn")
+            ol.menu
+                li  
+                    a(href="") Menu
+                li 
+                    a(href="") Blog
+                li 
+                    a(href="") Pricing
+                li 
+                    a(href="") Contact
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                    
+
+
+
+
+
+
+
+
+
+
+
+

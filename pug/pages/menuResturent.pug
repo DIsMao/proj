@@ -15,8 +15,7 @@ html
         script(src="./libs/jquery-3.7.1.min.js")  
         script(src="./libs/owlcarousel/owl.carousel.min.js")  
         script(src="./js/main.js")  
-        script(src="./pages/menu/js/date.js") 
-        script(src="./pages/menu/js/script.js") 
+        script(src="./pages/menuResturent/js/script.js") 
         //- script(src="./node_modules/owl.carousel/dist/owl.carousel.min.js") 
     body(class="relative")
         header
@@ -44,83 +43,27 @@ html
 
         main()
 
-            .container.pageMenuTitleBlock
-                .grid
-                    .left
-                        .slider.pageMenuSliderTop.owl-theme.owl-carousel
-                            .slide
-                                img(src="./images/Banner.png", alt="")
-                            .slide
-                                img(src="./images/Banner.png", alt="")
-                            .slide
-                                img(src="./images/Banner.png", alt="")
-                        .sliderPgntn
-                    .right
-                        .title Category
-                        .foodList 
-                            .food.Pizza 
-                                img(src="./images/foodIcons/Pizza.png", alt="")
-                                p Pizza
-                            .food.Asian.active
-                                img(src="./images/foodIcons/Hotdog.png", alt="")
-                                p Asian
-                            .food.Donat 
-                                img(src="./images/foodIcons/Doughnut.png", alt="")
-                                p Donat
-                            .food.Ice 
-                                img(src="./images/foodIcons/Icecream.png", alt="")
-                                p Ice
-                        
-                        .title.sb Sort By
-                        .sortByBlock
-                            .sortByRow 
-                                p Recomended
-                                p Fast Delivery
-                            .sortByRow 
-                                p Most Popular
-                                p 
-                        .title Price
-                        .sliderInputCss
-                            input(type="range", value="0", max="100").sortByInputSlider
-                        .rangeList 
-                            p $0
-                            p $25
-                            p $50
-                            p $100
-                            p $500
-                            p $1000
-                        .apply.button Apply
-                    .searchSwitch
-                        .sarch
-                            .inputBlock
-                                img(src="./images/menuPSearch.svg", alt="")
-                                input(placeholder="Search")
-                        .switcher
-                            .item Food
-                            .item.active Resturent              
+            .container.bigFoodCard
+                .card
+                    .image
+                        img(src="./images/bigImageCard.png", alt="") 
+                    .con 
+                        div(class="tag colorYellow") Healthy
+                        .name The Chicken King
+                        .cardFooter
+                            .timeaAndStars 
+                                .time="24min •"
+                                .stars
+                                    img(src="./images/cardStar.svg", alt="")
+                                    p 4.8
+                            a(href="").right 
+                                img(src="./images/Bookmark.svg", alt="")
             //- ===========================================
             .container
-                .blockHdrType1
-                    h2 Our Top <span>Dishes</span>
-                    a(href="") View All
-                        img(src="./images/viewAllArrow.svg", alt="")
-            div.container.cardsList3cols.menu
-              
-                .grid 
-                    +bigCard({image:"./images/bigCards/Image1.png",name:"The Chicken King",tag:"Healthy",time:"24min",stars:"4.8",tag_color:"colorYellow"})
-                    +bigCard({image:"./images/bigCards/Image2.png",name:"The Burger King",tag:"Trending",time:"24min",stars:"4.9",tag_color:"colorRed"})
-                    +bigCard({image:"./images/bigCards/Image3.png",name:"The Chicken King",tag:"Healthy",time:"24min",stars:"4.8",tag_color:"colorYellow"})
-                .CLfooter
-                    a(href="") View All
-                        img(src="./images/viewAllArrow.svg", alt="")
-                .line
-            //- ===========================================
-            .container
-                .blockHdrType1
-                    h2 Our Top <span>Dishes</span>
-                    a(href="") View All
-                        img(src="./images/viewAllArrow.svg", alt="")
-            div.container.cardsList5cols.menu
+                .blockHdrType3
+                    h2 Popular 🔥
+                        img(src="", alt="")
+            div.container.cardsList5cols.menuResturent
                 
                 .grid 
                     +littleCard({image:"./images/litteleCards/Food Image1.png",name:"Chicken Hell",tag:"Healthy",time:"24min",stars:"4.8",tag_color:"colorYellow",price1:"$12",price2:"99"})
@@ -128,10 +71,19 @@ html
                     +littleCard({image:"./images/litteleCards/Food Image3.png",name:"Swe Dish",tag:"Supreme",time:"34min",stars:"4.9",tag_color:"colorGreen",price1:"$19",price2:"99"})
                     +littleCard({image:"./images/litteleCards/Food Image4.png",name:"Chicken Hell",tag:"Healthy",time:"24min",stars:"4.8",tag_color:"colorYellow",price1:"$12",price2:"99"})
                     +littleCard({image:"./images/litteleCards/Food Image5.png",name:"Swe Dish",tag:"Trending",time:"34min",stars:"4.9",tag_color:"colorYellow",price1:"$19",price2:"99"})
-                .CLfooter
-                    a(href="") View All
-                        img(src="./images/viewAllArrow.svg", alt="")
+
+                
+            //- ===========================================
+            .container
+                .blockHdrType3
+                    h2 Chicken Vegetables
+            div.container.cardsList5cols.menuResturent
+                
+                .grid 
+                    +littleCard({image:"./images/litteleCards/Food Image1.png",name:"Chicken Hell",tag:"Healthy",time:"24min",stars:"4.8",tag_color:"colorYellow",price1:"$12",price2:"99"})
+                    +littleCard({image:"./images/litteleCards/Food Image2.png",name:"Swe Dish",tag:"Trending",time:"34min",stars:"4.9",tag_color:"colorRed",price1:"$19",price2:"99"})
                 .line
+                
             //- ===========================================
             .container
                 .blockHdrType2

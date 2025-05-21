@@ -547,6 +547,40 @@ header .container .bottomline {
     font-size: 23px;
   }
 }
+.blockHdrType3 {
+  width: 100%;
+  display: flex;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 1440px) {
+  .blockHdrType3 {
+    margin-bottom: 42px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .blockHdrType3 {
+    margin-bottom: 49px;
+  }
+}
+.blockHdrType3 h2 {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 73%;
+  color: #323142;
+}
+@media screen and (max-width: 1440px) {
+  .blockHdrType3 h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .blockHdrType3 h2 {
+    font-size: 24px;
+  }
+}
+.blockHdrType3 h2 span {
+  color: #6c5fbc;
+}
 .accordion {
   display: flex;
   flex-wrap: wrap;
@@ -1604,7 +1638,7 @@ main .container.cardsList5cols .grid {
 @media screen and (max-width: 1024px) {
   main .container.cardsList5cols .grid {
     column-gap: 21px;
-    row-gap: 42;
+    row-gap: 42px;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -1921,6 +1955,35 @@ main .container.cardsList5cols.menu .CLfooter {
 @media screen and (max-width: 1024px) {
   main .container.cardsList5cols.menu .CLfooter {
     display: flex;
+  }
+}
+main .container.cardsList5cols.menuResturent {
+  margin-bottom: 145px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols.menuResturent {
+    margin-bottom: 103px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols.menuResturent {
+    margin-bottom: 113px;
+  }
+}
+main .container.cardsList5cols.menuResturent .line {
+  margin-top: 150px;
+  margin-bottom: 171px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.cardsList5cols.menuResturent .line {
+    margin-top: 107px;
+    margin-bottom: 91px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.cardsList5cols.menuResturent .line {
+    margin-top: 111px;
+    margin-bottom: 88px;
   }
 }
 main .container .controlPurchases {
@@ -3413,6 +3476,262 @@ main .container.pageMenuTitleBlock .grid .right .apply {
     font-size: 11px;
     border-radius: 11px;
   }
+}
+main .container.bigFoodCard {
+  margin-top: 106px;
+  margin-bottom: 148px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard {
+    margin-top: 75px;
+    margin-bottom: 105px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard {
+    margin-top: 60px;
+    margin-bottom: 98px;
+  }
+}
+main .container.bigFoodCard .card {
+  border: 1.25px solid #f4f4f6;
+  border-radius: 30px;
+  box-shadow: 8px 91px 45px 0 rgba(229, 229, 229, 0.7);
+  background: #fff;
+  overflow: hidden;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard .card {
+    box-shadow: 4px 51px 25px 0 rgba(229, 229, 229, 0.7);
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card {
+    box-shadow: 5px 57px 28px 0 rgba(229, 229, 229, 0.7);
+  }
+}
+main .container.bigFoodCard .card .tag {
+  width: fit-content;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-weight: 400;
+  font-size: 12px;
+  display: none;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard .card .tag {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card .tag {
+    font-size: 10px;
+    display: block;
+  }
+}
+main .container.bigFoodCard .card .tag.colorYellow {
+  background: #f7edd0;
+  color: #daa31a;
+}
+main .container.bigFoodCard .card .tag.colorRed {
+  background: #f7c5ba;
+  color: #fb471d;
+}
+main .container.bigFoodCard .card .image {
+  width: 100%;
+  height: 378px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard .card .image {
+    height: 268px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card .image {
+    height: 140px;
+  }
+}
+main .container.bigFoodCard .card .image img {
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card .image img {
+    height: 100%;
+  }
+}
+main .container.bigFoodCard .card .con {
+  padding-top: 24px;
+  padding-bottom: 30px;
+  padding-left: 46px;
+  padding-right: 46px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard .card .con {
+    padding-top: 18px;
+    padding-bottom: 22px;
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card .con {
+    padding-top: 8px;
+    padding-bottom: 14px;
+    padding-left: 27px;
+    padding-right: 21px;
+    display: block;
+  }
+}
+main .container.bigFoodCard .card .con .name {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 162%;
+  color: #323142;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard .card .con .name {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card .con .name {
+    font-size: 20px;
+  }
+}
+main .container.bigFoodCard .card .con .cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard .card .con .cardFooter {
+    width: 460px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card .con .cardFooter {
+    width: auto;
+  }
+}
+main .container.bigFoodCard .card .con .cardFooter .timeaAndStars {
+  display: flex;
+  gap: 6px;
+}
+main .container.bigFoodCard .card .con .cardFooter .timeaAndStars .time {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 133%;
+  color: #8e97a6;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard .card .con .cardFooter .timeaAndStars .time {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card .con .cardFooter .timeaAndStars .time {
+    font-size: 15px;
+  }
+}
+main .container.bigFoodCard .card .con .cardFooter .timeaAndStars .stars {
+  display: flex;
+  gap: 6px;
+}
+main .container.bigFoodCard .card .con .cardFooter .timeaAndStars .stars p {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 133%;
+  color: #8e97a6;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard .card .con .cardFooter .timeaAndStars .stars p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card .con .cardFooter .timeaAndStars .stars p {
+    font-size: 15px;
+  }
+}
+main .container.bigFoodCard .card .con .cardFooter .timeaAndStars .stars img {
+  width: 36px;
+  height: 36px;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard .card .con .cardFooter .timeaAndStars .stars img {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card .con .cardFooter .timeaAndStars .stars img {
+    width: 22px;
+    height: 22px;
+  }
+}
+main .container.bigFoodCard .card .con .cardFooter .right {
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+}
+main .container.bigFoodCard .card .con .cardFooter .right img {
+  width: 100%;
+}
+@media screen and (max-width: 1440px) {
+  main .container.bigFoodCard .card .con .cardFooter .right {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .container.bigFoodCard .card .con .cardFooter .right {
+    width: 33px;
+    height: 33px;
+  }
+}
+main .container.map .mapImage {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+main .container.map .mapImage img {
+  height: 733px;
+}
+main .container.map .worker .con {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+main .container.map .worker .con .row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+main .container.map .worker .con .row .image {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+main .container.map .worker .con .row .image img {
+  width: 100%;
+  z-index: 2;
+  background-color: white;
+}
+main .container.map .worker .con .row .image .dotedLine {
+  height: 100%;
+  position: absolute;
+  border-left: 1px dotted #6c5fbc;
+  z-index: 1;
 }
 footer {
   margin-top: 216px;

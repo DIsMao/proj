@@ -549,6 +549,35 @@ header {
     }
 }
 
+.blockHdrType3{
+    width: 100%;
+    display: flex;
+    margin-bottom: 60px;
+    .screenLarge({
+        margin-bottom: 42px;
+    });
+    .screenMobile({
+        margin-bottom: 49px;
+    });
+    h2{
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 73%;
+        color: @blackColor2;
+        .screenLarge({
+           font-size: 24px;
+
+        });
+        .screenMobile({
+            font-size: 24px;
+        });
+        span{
+            color: @mainColor1;
+        }
+
+    }
+}
+
 .accordion{
     display: flex;
     flex-wrap: wrap;
@@ -1465,7 +1494,7 @@ main{
             });
             .screenMobile({
                  column-gap: 21px;
-                 row-gap: 42;
+                 row-gap: 42px;
                 grid-template-columns: 1fr 1fr;
             });
             .card{
@@ -1736,6 +1765,28 @@ main{
                 display: none;
                 .screenMobile({
                     display: flex
+                });
+            }
+        }
+        &.menuResturent{
+            margin-bottom: 145px;
+            
+            .screenLarge({
+                margin-bottom: 103px;
+            });
+            .screenMobile({
+                margin-bottom: 113px;
+            });
+            .line{
+                margin-top: 150px;
+                margin-bottom: 171px;
+                .screenLarge({
+                    margin-top: 107px;
+                    margin-bottom: 91px;
+                });
+                .screenMobile({
+                    margin-top: 111px;
+                    margin-bottom: 88px;
                 });
             }
         }
@@ -3031,6 +3082,237 @@ main{
                         font-size: 11px;
                         border-radius: 11px;
                     });
+                }
+            }
+        }
+    }
+    .container.bigFoodCard{
+        margin-top: 106px;
+        margin-bottom: 148px;
+        .screenLarge({
+            margin-top: 75px;
+            margin-bottom: 105px;
+        });
+        .screenMobile({
+            margin-top: 60px;
+            margin-bottom: 98px;
+        });
+        .card{
+            border: 1.25px solid @whiteColor3;
+            border-radius: 30px;
+            box-shadow: 8px 91px 45px 0 rgba(229, 229, 229, 0.7);
+            background: @whiteColor2;
+            overflow: hidden;
+            .screenLarge({
+                box-shadow: 4px 51px 25px 0 rgba(229, 229, 229, 0.7);
+
+            });
+            .screenMobile({
+                box-shadow: 5px 57px 28px 0 rgba(229, 229, 229, 0.7);
+
+            });
+            
+            .tag{
+                width: fit-content;
+                display: inline-block;
+                border-radius: 5px;
+                padding: 3px 8px;
+                font-weight: 400;
+                font-size: 12px;
+                display: none;
+                .screenLarge({
+                    font-size: 9px;
+                });
+                .screenMobile({
+                    font-size: 10px;
+                    display: block;
+                });
+                &.colorYellow{
+                    background: #f7edd0;
+                    color: #daa31a;
+                }
+                &.colorRed{
+                    background: #f7c5ba;
+                    color: #fb471d;
+                }
+            }
+            .image{
+                width: 100%;
+                height: 378px;
+                overflow: hidden;
+                .screenLarge({
+                        height: 268px;
+                });
+                .screenMobile({
+                    height: 140px;
+                });
+                img{
+                    width: 100%;
+                    .screenMobile({
+                        height: 100%;
+                        });
+                    object-fit: cover;
+                }
+            }
+            .con{
+                padding-top: 24px;
+                padding-bottom: 30px;
+                padding-left: 46px;
+                padding-right: 46px;
+                display: flex;
+                justify-content: space-between;
+                
+                .screenLarge({
+                    padding-top: 18px;
+                    padding-bottom: 22px;
+                    padding-left: 33px;
+                    padding-right: 33px;
+                });
+                .screenMobile({
+                    padding-top: 8px;
+                    padding-bottom: 14px;
+                    padding-left: 27px;
+                    padding-right: 21px;
+                    display: block;
+                });
+
+                .name{
+                    font-weight: 600;
+                    font-size: 40px;
+                    line-height: 162%;
+                    color: @blackColor2;
+                    .screenLarge({
+                        font-size: 28px;
+                    });
+                    .screenMobile({
+                        font-size: 20px;
+                    });
+                }
+                .cardFooter{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 600px;
+                    .screenLarge({
+                        width: 460px;
+                    });
+                    .screenMobile({
+                        width: auto;
+                    }); 
+                    .timeaAndStars{
+                        display: flex;
+                        gap: 6px;
+                        .time{
+                            font-family: @fontFamily5;
+                            font-weight: 400;
+                            font-size: 26px;
+                            line-height: 133%;
+                            color: @grayColor8;
+                            .screenLarge({
+                                font-size: 18px;
+                            });
+                            .screenMobile({
+                                font-size: 15px;
+                            });
+                        }
+                        .stars{
+                            display: flex;
+                            gap: 6px;
+                            p{
+                                font-family: @fontFamily5;
+                                font-weight: 400;
+                                font-size: 26px;
+                                line-height: 133%;
+                                color: @grayColor8;
+                                .screenLarge({
+                                    font-size: 18px;
+                                });
+                                .screenMobile({
+                                    font-size: 15px;
+                                });
+                            }
+                            img{
+                                width: 36px;
+                                height: 36px;
+                                .screenLarge({
+                                    width: 25px;
+                                    height: 25px
+                                });
+                                .screenMobile({
+                                    width: 22px;
+                                    height: 22px
+                                }); 
+                            }
+                        }
+                    }
+                    .right{
+                        border-radius: 50%;
+                        width: 62px;
+                        height: 62px;
+                        img{
+                            width: 100%;
+                        }
+                        .screenLarge({
+                            width: 45px;
+                            height: 45px
+                        });
+                        .screenMobile({
+                            width: 33px;
+                            height: 33px
+                        }); 
+                    }
+                }
+            }
+
+        }
+    }
+    .container.map{
+        .mapImage{
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            img{
+                height: 733px;
+            }
+        }
+        .worker{
+            .hdr{
+
+            }
+            .con{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 30px;
+                position: relative;
+                .row{
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    
+                    .image{
+                        display: flex;
+                        justify-content: center;
+                        height: 100%;
+                        img{
+                            width: 100%;
+                            z-index: 2;
+                            background-color: white;
+                        }
+                        .dotedLine{
+                            height: 100%;
+                            position: absolute;
+                            border-left: 1px dotted @mainColor1;
+                            z-index: 1;
+                        }
+                    }
+                    .text{
+
+                    }
+                }
+
+                .btn{
+
                 }
             }
         }
